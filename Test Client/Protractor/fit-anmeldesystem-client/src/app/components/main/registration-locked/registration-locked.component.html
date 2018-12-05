@@ -1,0 +1,10 @@
+<div *ngIf="lockPage != null">
+  <div [ngSwitch]="isExpiredLockMode">
+    <div *ngSwitchCase="true">
+      <div [innerHtml]="lockPage.expired | fitHtmlSecurityBypass"></div>
+    </div>
+    <div *ngSwitchDefault>
+      <div [innerHtml]="lockPage.incoming | fitHtmlSecurityBypass"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,187 @@
+<div class="position-fixed booking-loading-container"
+     [ngClass]="{'displayed': isBookingTransmitting}">
+  <div class="d-flex justify-content-center align-items-center flex-column h-100">
+    <div class="text-bold">Ihre Daten werden hochgeladen</div>
+    <div class="text-smaller">Bitte warten Sie einen Augenblick</div>
+    <i class="fa fa-spin fa-circle-o-notch mt-2"></i>
+  </div>
+</div>
+
+<div class="small-container my-4">
+
+  <div class="mb-3"
+       *ngIf="isEditMode">
+    <div class="alert alert-info" role="alert">
+      <div class="text-bold">
+        <i class="fa fa-pencil"></i>
+        Bearbeitungs-Modus!
+      </div>
+      <div>Sie befinden sich im Bearbeitungs-Modus. Die Anmeldung wurde bereits eingereicht, und kann hier im nachhinen
+        überarbeitet bzw. ergänzt werden.
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3"
+       *ngIf="isAdminMode">
+    <div class="alert alert-info d-flex" role="alert">
+      <div class="text-bold my-auto">
+        <i class="fa fa-user-secret"></i>
+        Admin-Modus
+      </div>
+      <div class="ml-auto">
+
+        <div [ngSwitch]="booking.isAccepted">
+          <div *ngSwitchCase="IsAccepted.Pending" class="d-flex">
+            <span class="text-muted my-auto">Anmeldung noch ausstehend: </span>
+            <button class="btn btn-sm btn-success mx-2"
+                    (click)="acceptBooking()">
+              <i class="fa fa-check"></i>
+              Annehmen
+            </button>
+            <button class="btn btn-sm btn-danger"
+                    (click)="rejectBooking()">
+              <i class="fa fa-times"></i>
+              Ablehnen
+            </button>
+          </div>
+          <div *ngSwitchCase="IsAccepted.Accepted" class="d-flex">
+            <div class="text-muted mr-2">Status:</div>
+            <div class="text-success text-bold">
+              <i class="fa fa-check"></i> Akzeptiert
+            </div>
+          </div>
+          <div *ngSwitchCase="IsAccepted.Rejected" class="d-flex">
+            <div class="text-muted mr-2">Status:</div>
+            <div class="text-danger text-bold">
+              <i class="fa fa-times"></i> Abgelehnt
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="d-inline-flex px-4 w-100">
+    <!--step 1-->
+    <div class="step-container flex-1 mb-3"
+         *ngFor="let fitStep of steps; let index = index"
+         (click)="setCurrentPage(currentStep, fitStep.step)">
+      <div class="step-header justify-content-center d-flex flex-column align-items-center">
+        <div class="position-relative my-auto step-icon rounded-circle d-flex justify-content-center align-items-center"
+             [ngClass]="{'selected': isCurrentStep(fitStep.step),
+                       'is-invalid-step': isInvalid(fitStep),
+                       'is-valid-step': isValid(fitStep)}">
+
+          <div class="step-number text-dark text-center">
+            {{index + 1}}
+          </div>
+
+          <i class="fa fa-warning text-danger icon-positioning"
+             *ngIf="isInvalid(fitStep)">
+          </i>
+          <i class="fa fa-check text-success icon-positioning"
+             *ngIf="isValid(fitStep)">
+          </i>
+        </div>
+
+        <div [ngSwitch]="fitStep.step">
+          <div *ngSwitchCase="Step.GeneralData"
+               class="my-auto">
+            Firma Stammdaten
+          </div>
+          <div *ngSwitchCase="Step.DetailedData"
+               class="my-auto">
+            Details zur Firma
+          </div>
+          <div *ngSwitchCase="Step.FitAppearance"
+               class="my-auto">
+            Ihr Auftreten
+          </div>
+          <div *ngSwitchCase="Step.PackagesAndLocation"
+               class="my-auto">
+            Pakete & Standort
+          </div>
+          <div *ngSwitchCase="Step.ContactAndRemarks"
+               class="my-auto">
+            FIT-Kontakt
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--progress bar-->
+  <div class="progress mx-4">
+    <div id="progBar" class="progress-bar progress-bar-striped"
+         [ngClass]="{'bg-danger': getProgress() < 0.25,
+                     'bg-lighten-primary': getProgress() <= 0.75 && getProgress() >= 0.25,
+                     'bg-success': getProgress() > 0.75}"
+         role="progressbar" [style.width]="getProgress() * 100 + '%'">
+    </div>
+  </div>
+
+  <!--main container-->
+  <div class="py-3 mx-4 mt-4 mb-0 border-top">
+    <fit-general-data [isVisible]="currentStep == Step.GeneralData"
+                      [stepFormGroup]="fitFormGroup.controls['generalData']"
+                      (onNavigateToAccount)="navigateToAccount()">
+    </fit-general-data>
+
+    <fit-detailed-data [isVisible]="currentStep == Step.DetailedData"
+                       [formGroup]="fitFormGroup.controls['detailedData']"
+                       (onInput)="validateStepWhenTrue(Step.DetailedData)">
+    </fit-detailed-data>
+
+    <fit-fit-appearance [isVisible]="currentStep == Step.FitAppearance"
+                        [formGroup]="fitFormGroup.controls['fitAppearance']"
+                        (onInput)="validateStepWhenTrue(Step.FitAppearance)">
+    </fit-fit-appearance>
+
+    <fit-packages-and-location [isVisible]="currentStep == Step.PackagesAndLocation"
+                               [formGroup]="fitFormGroup.controls['packagesAndLocation']"
+                               (onInput)="validateStepWhenTrue(Step.PackagesAndLocation)"
+                               [event]="event">
+    </fit-packages-and-location>
+
+    <fit-contact-and-remarks [isVisible]="currentStep == Step.ContactAndRemarks"
+                             [formGroup]="fitFormGroup.controls['contactAndRemarks']"
+                             (onInput)="validateStepWhenTrue(Step.ContactAndRemarks)">
+    </fit-contact-and-remarks>
+
+    <div class="d-flex">
+      <div class="ml-auto text-smaller text-muted">* Pflichtfeld</div>
+    </div>
+  </div>
+
+  <!--navigation buttons-->
+  <div class="d-flex mx-4 mb-4">
+    <button *ngIf="currentStep != Step.GeneralData"
+            class="btn btn-dark text-bold"
+            id="btnPrevious"
+            (click)="previousPage()">
+      <i class="fa fa-arrow-left"></i>
+      Zurück
+    </button>
+
+    <div class="flex-filler"></div>
+    <button *ngIf="currentStep != Step.ContactAndRemarks"
+            class="btn btn-dark text-bold"
+            id="btnNext"
+            (click)="nextPage()">
+      Weiter
+      <i class="fa fa-arrow-right"></i>
+    </button>
+
+    <button *ngIf="currentStep == Step.ContactAndRemarks"
+            id="btnSubmitBooking"
+            class="btn btn-success text-bold"
+            (click)="submitBooking()">
+      <span *ngIf="!isEditMode">Anmelden</span>
+      <span *ngIf="isEditMode">Speichern</span>
+      <i class="fa fa-arrow-right ml-1"></i>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+@import "../../../styles/fit-variables";
+@import "../../../styles/fit-global-styles";
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-rows: 200px 200px 200px;
+  grid-column-gap: 2%;
+  grid-row-gap: 25px;
+}
+
+.active > .text-muted,
+.dropdown-item:active > .text-muted {
+  color: #eaeaea !important;
+}
+
+.active > div,
+.dropdown-item:active > div{
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  max-height: 500px;
+  overflow: auto;
+}

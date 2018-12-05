@@ -1,0 +1,115 @@
+<fit-test-mail-modal [email]="selectedEmail"></fit-test-mail-modal>
+
+<div class="container mb-5">
+  <h1 class="mt-5 mb-3 text-center">Dynamische Mailvorlagen</h1>
+
+  <!--isLoading animation-->
+  <div *ngIf="isLoading"
+       class="mt-7">
+    <fit-loading-spinner [message]="'E-Mails werden geladen ...'"></fit-loading-spinner>
+  </div>
+
+  <div *ngIf="!isLoading && selectedEmail != null">
+
+    <!--mail dropdown-->
+    <div class="d-flex justify-content-center align-items-center mt-3">
+      <div class="text-bold text-larger d-flex flex-column mr-2">
+        <span>Mail Vorlage:</span>
+        <span class="text-placeholder"></span>
+      </div>
+
+      <div class="d-flex flex-column">
+        <div class="dropdown"
+             #mailDropdown>
+          <button class="btn btn-light dropdown-toggle mail-select"
+                  [disabled]="doUnsavedChangesExist()"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown">
+            {{selectedEmail.name}}
+          </button>
+
+          <div class="dropdown-menu">
+            <a *ngFor="let email of emails"
+               class="dropdown-item"
+               (click)="selectEmail(email)"
+               [ngClass]="{'selected': selectedEmail.id == email.id}">
+              {{email.name}}
+            </a>
+          </div>
+
+          <div class="text-placeholder text-center text-smaller text-muted">
+            <span *ngIf="doUnsavedChangesExist()">Ungespeicherte Änderungen!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="editableEmail != null">
+      <p class="text-center mb-3">{{editableEmail.description}}</p>
+
+      <div class="d-flex w-100">
+        <button class="btn btn-primary big-rounded-button text-bold mb-4 mx-auto"
+                [disabled]="doUnsavedChangesExist()"
+                data-toggle="modal"
+                data-target="#testMailModal">
+          <i class="fa fa-envelope"></i>
+          Test-Email senden
+        </button>
+      </div>
+
+      <div class="d-flex">
+
+        <!--mail edit area-->
+        <div class="flex-1">
+          <div class="form-group d-flex align-items-center">
+            <label for="subject" class="text-bold my-0 mr-3">Betreff:</label>
+            <input class="form-control" style="color: black"
+                   [(ngModel)]="editableEmail.subject"
+                   (keyup)="emailChanged()"
+                   type="text"
+                   id="subject">
+          </div>
+
+          <fit-admin-html-editor (valueChange)="emailChanged()"
+                                 (quillEditorChange)="quillEditor = $event"
+                                 [(currentIndex)]="currentIndex"
+                                 [(value)]="editableEmail.template"
+                                 [style]="{height: '380px'}">
+          </fit-admin-html-editor>
+        </div>
+
+        <!--mail variables-->
+        <div class="ml-3 variable-container">
+          <h4 class="text-bold">Mail-Variablen</h4>
+
+          <div class="scroll-list-container height-restriction">
+            <div *ngFor="let variable of editableEmail.availableVariables"
+                 class="floating-effect p-2 mb-2 rounded text-bold variable-item"
+                 (click)="addVariable(variable)">
+              {{variable.name}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--buttons-->
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-danger mail-edit-button"
+              [disabled]="!doUnsavedChangesExist()"
+              (click)="discardEmail()">
+        <i class="fa fa-times"></i>
+        Verwerfen
+      </button>
+      <button class="btn btn-success mail-edit-button"
+              [disabled]="!doUnsavedChangesExist()"
+              (click)="saveEmail()">
+        <i class="fa fa-download"></i>
+        Speichern
+      </button>
+    </div>
+  </div>
+
+</div>

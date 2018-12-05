@@ -1,0 +1,44 @@
+<div *ngIf="graduate != null || company != null">
+  <div class="account-header">
+    <div class="small-container d-flex flex-column justify-content-center align-items-center h-100">
+      <img src="../../../../assets/logo_htl_white_blur.png" class="htl-logo" alt="HTL Leonding">
+      <h2 class="text-bold text-light mt-2">
+      <span [ngSwitch]="isGraduate">
+        <span *ngSwitchCase="true">
+          <i class="fa fa-user"></i>
+          {{graduate.firstName}} {{graduate.lastName}}
+        </span>
+        <span *ngSwitchCase="false">{{company.name}}</span>
+      </span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="bg-white">
+    <div class="small-container mb-5">
+
+      <div class="d-flex">
+        <button class="btn btn-link ml-auto mt-2"
+                (click)="logout()">
+          <i class="fa fa-sign-out"></i>
+          Ausloggen
+        </button>
+      </div>
+
+      <div [ngSwitch]="isGraduate">
+
+        <fit-graduate-overview *ngSwitchCase="true"
+                               [graduate]="graduate"
+                               (editModeChanged)="editModeChanged($event)">
+        </fit-graduate-overview>
+
+        <fit-company-overview *ngSwitchCase="false"
+                              [booking]="booking"
+                              [company]="company"
+                              (editModeChanged)="editModeChanged($event)">
+        </fit-company-overview>
+
+      </div>
+    </div>
+  </div>
+</div>
