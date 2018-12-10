@@ -1,0 +1,270 @@
+<div *ngIf="isVisible">
+  <fit-location-picker-modal [selectedLocation]="selectedLocation"
+                             [event]="event"
+                             (selectedLocationChange)="setLocation($event)"
+                             [currentCategory]="selectedPackage == Package.BasicPack ? 'B' : 'A'">
+  </fit-location-picker-modal>
+
+  <div class="mb-4">
+    <h2 class="text-bold">Pakete und Standort</h2>
+    <p>Entscheiden Sie sich für eines unserer drei FIT-Pakete und wählen Sie dann ihren gewünschten Standort aus.</p>
+  </div>
+
+  <form [formGroup]="formGroup">
+
+    <div class="mb-4">
+      <h5 class="text-bold m-0">Wählen Sie Ihr FIT-Paket</h5>
+
+      <div class="card-deck">
+
+        <!--basic fitPackage-->
+        <div class="pointer card text-white bg-info m-3 enabled" id="basicPack"
+             (click)="togglePackage(Package.BasicPack)">
+          <div class="card-header text-center">
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            {{basicPackage?.name}}
+          </div>
+
+          <ul class="list-group list-group-flush flex-filler">
+            <li class="list-group-item">
+              Stand am FIT
+            </li>
+            <li class="list-group-item">
+              Kategorie B Platz
+            </li>
+            <li class="list-group-item h-100">
+              Eintrag im Flyer
+            </li>
+          </ul>
+
+          <div class="card-footer d-flex">
+        <span class="flex-filler  my-auto">
+          <i class="fa fa-2x fa-check-square"></i>
+        </span>
+            <span class="package-price">{{basicPackage?.price}} €</span>
+          </div>
+        </div>
+
+        <!--sponsor fitPackage-->
+        <div class="pointer card text-white bg-danger  m-3" id="sponsorPack"
+             [ngClass]="{'enabled': isPackageSelected(Package.SponsorPack)}"
+             (click)="togglePackage(Package.SponsorPack)">
+          <div class="card-header text-center">
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            {{sponsorPackage?.name}}
+          </div>
+
+          <ul class="list-group list-group-flush flex-filler">
+            <li class="list-group-item text-bold">
+              beinhaltet {{basicPackage?.name}}
+            </li>
+            <li class="list-group-item">
+              Kategorie A Platz
+            </li>
+            <li class="list-group-item h-100">
+              Logo auf: Plakat, Homepage, Flyer
+            </li>
+          </ul>
+
+          <div class="card-footer d-flex">
+        <span class="flex-filler  my-auto">
+          <i class="fa fa-2x"
+             [ngClass]="{'fa-square-o': !isPackageSelected(Package.SponsorPack),
+                         'fa-check-square': isPackageSelected(Package.SponsorPack)}">
+          </i>
+        </span>
+            <span class="mt-auto mb-1 mr-1">+ {{sponsorPackage?.price - basicPackage?.price}} € =</span>
+            <span class="package-price">{{sponsorPackage?.price}} €</span>
+          </div>
+        </div>
+
+        <!--lecture fitPackage-->
+        <div class="pointer card text-white bg-sponsor m-3" id="lecturePack"
+             [ngClass]="{'enabled': isPackageSelected(Package.LecturePack),
+                      'disabled-element-not-allowed': presentationsLocked && !isPackageSelected(Package.LecturePack)}"
+             (click)="togglePackage(Package.LecturePack)">
+
+          <div class="card-header text-center">
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            {{lecturePackage?.name}}
+          </div>
+
+          <ul class="list-group list-group-flush flex-filler">
+            <li class="list-group-item text-bold">
+              beinhaltet {{sponsorPackage?.name}}
+            </li>
+            <li class="list-group-item h-100">
+              Antrag für einen Vortrag:
+              <ul>
+                <li>vor vielen Klassen</li>
+                <li>eigener Raum</li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="card-footer d-flex">
+            <span class="flex-filler my-auto">
+              <i class="fa fa-2x"
+                 [ngClass]="{'fa-square-o': !isPackageSelected(Package.LecturePack),
+                             'fa-check-square': isPackageSelected(Package.LecturePack)}">
+              </i>
+            </span>
+            <span class="mt-auto mb-1 mr-1">+ {{lecturePackage?.price - sponsorPackage?.price}} € = </span>
+            <span class="package-price">{{lecturePackage?.price}} €</span>
+          </div>
+
+          <div *ngIf="presentationsLocked && !isPackageSelected(Package.LecturePack)"
+               class="presentation-locked-warning text-dark text-bold text-center">
+            {{lecturePackage?.name}} nicht mehr verfügbar!
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="text-bold mb-2">Wählen Sie Ihren Standplatz</h5>
+
+      <div class="d-flex align-items-center">
+
+        <div class="flex-1 d-flex">
+          <div class="text-bold mr-2">
+            Gewählter Platz:
+          </div>
+
+          <div [ngSwitch]="selectedLocation != null">
+            <div *ngSwitchCase="true">Nr: {{selectedLocation.number}}</div>
+            <div *ngSwitchCase="false">keinen Platz ausgewählt</div>
+          </div>
+        </div>
+
+        <button type="button"
+                id="btnLocationModal"
+                class="btn btn-primary"
+                data-toggle="modal"
+                data-target="#locationPickerModal">
+          <i class="fa fa-map-marker mr-1"></i>
+          Standplatz wählen
+        </button>
+
+        <div class="flex-1"></div>
+
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <h5 class="text-bold mb-2">Kostenübersicht:</h5>
+
+      <table>
+        <tr>
+          <td class="text-right" width="13%">{{basicPackage?.price}},00 €</td>
+          <td width="87%">{{basicPackage?.name}}</td>
+        </tr>
+
+        <tr *ngIf="isPackageSelected(Package.SponsorPack)">
+          <td class="text-right">+ {{sponsorPackage?.price - basicPackage?.price}},00 €</td>
+          <td>{{sponsorPackage?.name}}</td>
+        </tr>
+
+        <tr *ngIf="isPackageSelected(Package.LecturePack)">
+          <td class="text-right">+ {{lecturePackage?.price - sponsorPackage?.price}},00 €</td>
+          <td>{{lecturePackage?.name}}</td>
+        </tr>
+
+        <tr class="border-top">
+          <th class="text-right">= {{getSelectedPackage()?.price}},00 €</th>
+          <th>Gesamt</th>
+        </tr>
+      </table>
+
+    </div>
+
+    <div class="mb-4" *ngIf="isPackageSelected(Package.LecturePack)">
+      <h5 class="text-bold mb-3">
+        Ihr Vortrag
+        <span class="sub-text">(nur beim {{lecturePackage?.name}} notwendig)</span>
+      </h5>
+
+      <div class="form-group d-flex align-items-center mb-0 mt-2">
+        <div>
+          <label for="title" class="my-0 mr-3">Titel:</label>
+          <div class="invalid-message invalid-message-container"></div>
+        </div>
+        <div class="flex-1">
+          <input class="form-control"
+                 formControlName="presentationTitle"
+                 type="text"
+                 placeholder="Präsentations-Titel"
+                 id="title"
+                 (change)="onInputChanged()"
+                 [ngClass]="{'is-invalid': isInvalid('presentationTitle')}">
+          <div class="invalid-message invalid-message-container">
+            <div *ngIf="isEmpty('presentationTitle')">Präsentations-Titel darf nicht leer sein!</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="otherNotes" class="mb-1">Kurzbeschreibung:</label>
+        <textarea class="form-control"
+                  formControlName="presentationDescription"
+                  id="otherNotes"
+                  (change)="onInputChanged()"
+                  placeholder="Kurze Beischreibung Ihres Vortrags"
+                  [ngClass]="{'is-invalid': isInvalid('presentationDescription')}"
+                  rows="5">
+        </textarea>
+        <div class="invalid-message invalid-message-container">
+          <div *ngIf="isEmpty('presentationDescription')">Präsentations-Beschreibung darf nicht leer sein!</div>
+        </div>
+      </div>
+
+      <div>Zielgruppe(n):</div>
+      <div class="d-flex mt-2">
+        <div *ngFor="let branch of branches; let index = index"
+             class="checkbox mx-2">
+          <label [id]="'checkboxBranch' + index">
+            <input type="checkbox"
+                   (change)="branchChanged(branch, $event)"
+                   [checked]="isBranchSelected(branch)">
+            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+            {{branch.name}}
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group d-flex align-items-center mt-2">
+        <label for="presentation" class="my-0 mr-3">Präsentation: </label>
+        <div class="input-group"
+             fitFilePicker
+             [accept]="'file/*'"
+             [maxSize]="20000000"
+             (filePick)="filePicked($event)">
+          <input class="form-control"
+                 id="presentation"
+                 type="text"
+                 [value]="presentationFile?.name"
+                 placeholder="Logo auswählen..."
+                 disabled>
+          <span class="input-group-append">
+            <button class="btn btn-primary" type="button">Durchsuchen</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
