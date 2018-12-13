@@ -2,12 +2,8 @@ package Selenium;
 
 import org.junit.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import utils.EmailUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -17,12 +13,11 @@ import static org.junit.Assert.assertTrue;
 @FixMethodOrder
 public class BaseDataIT {
     private static WebDriver driver;
-    private static utils.EmailUtils emailUtils;
 
     @BeforeClass
     public static void initClass()
     {
-        System.setProperty("webdriver.chrome.driver","C:\\opt\\Selenium\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",".\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().fullscreen();

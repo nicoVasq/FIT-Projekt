@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EmailUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/email.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stuff/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/chromedriver.exe" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,14 +113,51 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="2076908807">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="784" />
+          <entry key="xml" value="49" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="784" />
+          <entry key="XML" value="49" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="9" />
+          <entry key="java" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="9" />
+          <entry key="JAVA" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="442">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -122,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+            <state relative-caret-position="816">
+              <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,14 +174,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="79" column="64" lean-forward="true" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="299">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -164,13 +204,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/stuff/email.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/EmailUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/SeleniumWebDriverTesting.java" />
         <option value="$PROJECT_DIR$/src/test/java/RegisterIT.java" />
         <option value="$PROJECT_DIR$/src/test/java/BaseDataIT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/EmailUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" />
         <option value="$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" />
       </list>
     </option>
   </component>
@@ -187,11 +227,10 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="200" />
-    <option name="y" value="-15" />
-    <option name="width" value="1000" />
-    <option name="height" value="750" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,6 +244,11 @@
             <path>
               <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="Selenium" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
@@ -245,10 +289,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542823065196" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../FIT-Website-TestProject/Selenium" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -270,7 +314,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BaseDataIT">
+  <component name="RunManager" selected="JUnit.RegisterIT">
     <configuration name="BaseDataIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIT-Website-Selenium-Test" />
       <extension name="coverage">
@@ -337,17 +381,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegisterIT.TEST002_GETCODE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIT-Website-Selenium-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Selenium" />
+      <option name="MAIN_CLASS_NAME" value="Selenium.RegisterIT" />
+      <option name="METHOD_NAME" value="TEST002_GETCODE" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.BaseDataIT.TEST002_FirmennameÄndern" />
       <item itemvalue="JUnit.BaseDataIT" />
       <item itemvalue="JUnit.RegisterIT" />
       <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
+      <item itemvalue="JUnit.RegisterIT.TEST002_GETCODE" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BaseDataIT" />
-        <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
         <item itemvalue="JUnit.RegisterIT" />
+        <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
+        <item itemvalue="JUnit.RegisterIT.TEST002_GETCODE" />
+        <item itemvalue="JUnit.BaseDataIT" />
         <item itemvalue="JUnit.BaseDataIT.TEST002_FirmennameÄndern" />
       </list>
     </recent_temporary>
@@ -374,49 +436,55 @@
       <workItem from="1542738103815" duration="689000" />
       <workItem from="1542816817410" duration="1030000" />
       <workItem from="1542821631037" duration="1289000" />
+      <workItem from="1544440431365" duration="636000" />
+      <workItem from="1544638296289" duration="380000" />
+      <workItem from="1544642211567" duration="257000" />
+      <workItem from="1544643061730" duration="1542000" />
+      <workItem from="1544699420844" duration="7800000" />
+      <workItem from="1544711821473" duration="346000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisterIT - 2018.11.20 at 10h 14m 39s.xml">
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 25m 49s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.11.20 at 10h 56m 27s.xml">
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 28m 15s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.11.20 at 10h 57m 15s.xml">
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 29m 57s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseDataIT - 2018.11.20 at 10h 57m 50s.xml">
-      <configuration name="BaseDataIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2018.11.20 at 11h 42m 34s.xml">
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 33m 03s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.11.21 at 18h 41m 20s.xml">
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 35m 29s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT_TEST001_Register - 2018.11.21 at 18h 43m 52s.xml">
-      <configuration name="RegisterIT.TEST001_Register" configurationId="JUnit" />
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 37m 46s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseDataIT - 2018.11.21 at 18h 45m 48s.xml">
-      <configuration name="BaseDataIT" configurationId="JUnit" />
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 39m 33s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseDataIT - 2018.11.21 at 18h 47m 26s.xml">
-      <configuration name="BaseDataIT" configurationId="JUnit" />
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 42m 53s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BaseDataIT - 2018.11.21 at 18h 48m 27s.xml">
-      <configuration name="BaseDataIT" configurationId="JUnit" />
+    <history-entry file="RegisterIT - 2018.12.13 at 14h 43m 42s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2018.12.13 at 15h 44m 06s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32997000" />
+    <option name="totallyTimeSpent" value="43958000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29395974" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32526475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -425,17 +493,17 @@
       <window_info id="Learn" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32796487" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39968154" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.3452381" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329429" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3282313" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32796487" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32142857" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,48 +525,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/EmailUtils.java</url>
-          <line>259</line>
+          <url>file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java</url>
+          <line>71</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/email.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/EmailUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="259" column="12" selection-start-line="259" selection-start-column="12" selection-end-line="259" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#839#840#0" expanded="true" />
-            <element signature="e#874#875#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#2789#2790#0" expanded="true" />
-            <element signature="e#2847#2848#0" expanded="true" />
-            <element signature="e#2907#2908#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-            <element signature="e#3026#3027#0" expanded="true" />
-            <element signature="e#3085#3086#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3204#3205#0" expanded="true" />
-            <element signature="e#3257#3258#0" expanded="true" />
-            <element signature="e#3330#3331#0" expanded="true" />
-            <element signature="e#3388#3389#0" expanded="true" />
-            <element signature="e#3445#3446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/email.properties" />
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/requests/FilterRequest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -506,10 +542,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/statements/RunAfters.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1187">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EmailUtils.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        <state relative-caret-position="816">
+          <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -518,18 +590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="79" column="64" lean-forward="true" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        <state relative-caret-position="299">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -610,7 +672,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>bundle-jars</last-edited>
+          <last-edited>Maven: org.testng:testng:7.0.0-beta1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
