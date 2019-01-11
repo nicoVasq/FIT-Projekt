@@ -8,6 +8,9 @@ import { ErrorInterceptor } from './core/dao/helper/error-interceptor';
 import { AppLoadingService } from './core/app-services/app-loading.service';
 import { Router } from '@angular/router';
 
+import {HttpClient} from '@angular/common/http';
+import {AppConfig} from './core/app-config/app-config.service';
+
 @Component({
   selector: 'fit-root',
   templateUrl: './app.component.html',
@@ -23,7 +26,10 @@ export class AppComponent implements OnInit {
                      private toastr: ToastrService,
                      private eventService: EventService,
                      private router: Router,
-                     private routerService: RouterService) {
+                     private routerService: RouterService,
+
+                     private http: HttpClient,
+                     private appConfig: AppConfig) {
   }
 
   public ngOnInit(): void {
@@ -40,5 +46,10 @@ export class AppComponent implements OnInit {
 
   public showFitHeader(): boolean {
     return this.applicationStateService.activatedApplication === FitApplication.FitRegistration;
+  }
+
+  public SendDbMigrateRequest(): void {
+    this.http.get(this.appConfig.serverURL + 'resetdb');
+    console.log('Delete Requested');
   }
 }

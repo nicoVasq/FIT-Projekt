@@ -18,6 +18,9 @@ import { FitFooterComponent } from './components/shared-elements/components/fit-
 import { RegistrationLockedComponent } from './components/main/registration-locked/registration-locked.component';
 import { RegistrationLockedResolver } from './core/resolver/registration-locked.resolver';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 registerLocaleData(localeDe, 'de-AT');
 
 @NgModule({
@@ -29,7 +32,9 @@ registerLocaleData(localeDe, 'de-AT');
     ToastrModule.forRoot(),
     CoreModule,
     SharedModule,
-    JwtModule
+    JwtModule,
+
+    HttpClientModule
   ], declarations: [
     AppComponent,
     MainComponent,
