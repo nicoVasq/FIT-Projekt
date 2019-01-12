@@ -48,8 +48,10 @@ export class AppComponent implements OnInit {
     return this.applicationStateService.activatedApplication === FitApplication.FitRegistration;
   }
 
+  // TO REMOVE LATER
+  // Temporal function for migrating the database
   public SendDbMigrateRequest(): void {
-    this.http.get(this.appConfig.serverURL + 'resetdb');
+    this.http.get('http://localhost:8181/api/resetdb').subscribe(data => {console.log(data); });
     console.log('Delete Requested');
   }
 }
