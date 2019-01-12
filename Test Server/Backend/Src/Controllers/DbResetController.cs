@@ -9,10 +9,12 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore;
 namespace Backend.Src.Controllers
 {
-    [Route("api/[resetdb]")]
-    public class DbResetController
+    [Route("api/resetdb")]
+    [Controller]
+    public class DbResetController : Controller
     {
         private IUnitOfWork _unitOfWork;
 
@@ -24,7 +26,10 @@ namespace Backend.Src.Controllers
         [HttpGet]
         public void DeleteDbRequest()
         {
+
             _unitOfWork.DeleteDatabase();
+
+
         }
     }
 }
