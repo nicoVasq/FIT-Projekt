@@ -1,9 +1,0 @@
-@import "../../../../styles/fit-global-styles";
-
-input:read-only {
-  cursor: default;
-
-  &:focus {
-    box-shadow: none;
-  }
-}
