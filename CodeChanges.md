@@ -51,7 +51,12 @@ namespace Backend.Src.Controllers
         [HttpGet]
         public void DeleteDbRequest()
         {
-            _unitOfWork.DeleteDatabase();
+            _uow.ContactRepository.Delete(_uow.ContactRepository.Count());
+            _uow.AddressRepository.Delete(_uow.AddressRepository.Count());
+            _uow.CompanyBranchRepository.Delete(_uow.CompanyBranchRepository.Count());
+            _uow.CompanyRepository.Delete(_uow.CompanyRepository.Count());
+
+            _uow.Save();
         }
     }
 }
