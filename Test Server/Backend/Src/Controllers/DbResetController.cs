@@ -16,18 +16,24 @@ namespace Backend.Src.Controllers
     [Controller]
     public class DbResetController : Controller
     {
-        private IUnitOfWork _unitOfWork;
+        private IUnitOfWork _uow;
 
         public DbResetController(IUnitOfWork uow)
         {
-            _unitOfWork = uow;
+            _uow = uow;
+            
         }
 
         [HttpGet]
         public void DeleteDbRequest()
         {
+            _uow.ContactRepository.Delete(_uow.ContactRepository.Count());
+            _uow.AddressRepository.Delete(_uow.AddressRepository.Count());
+            _uow.CompanyBranchRepository.Delete(_uow.CompanyBranchRepository.Count());
+            _uow.CompanyRepository.Delete(_uow.CompanyRepository.Count());
 
-            _unitOfWork.DeleteDatabase();
+            _uow.Save();
+            //_uow.DeleteDatabase();
 
 
         }
