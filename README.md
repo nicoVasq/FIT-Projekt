@@ -3,11 +3,12 @@
 In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um Fehler bei den Kunden zu vermeiden.
 
 
-### Architecture for testing
+### Wir testen das Project mit einem ausenstehenden Java Selenium Program
 
 <img src="Images/FitWebsite_Simple.png" />
 
-<img src="Images/protractor.png" /><img src="Images/Selenium-Logo.png" />
+### Verwendete Software
+<img src="Images/protractor.png" /> <img src="Images/Selenium-Logo.png" />
 
 ### Plakat
 
