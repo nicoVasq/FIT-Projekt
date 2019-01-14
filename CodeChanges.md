@@ -7,6 +7,21 @@
 
 - app.component.ts
 ```ts
+...
+import {HttpClient} from '@angular/common/http';
+import {AppConfig} from './core/app-config/app-config.service';
+.
+.
+
+public constructor(private applicationStateService: ApplicationStateService,
+                    .
+                    .                    
+                    private http: HttpClient,
+                    private appConfig: AppConfig) {
+  }
+.
+.
+
 public SendDbMigrateRequest(): void {
     this.http.get('http://localhost:8181/api/resetdb').subscribe(data => {
         console.log(data); });
