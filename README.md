@@ -5,3 +5,7 @@
 
 ### Simple
 <img src="Images/FitWebsite_Simple.png" />
+
+### Plakat
+
+<img src="Images/Plakat.pdf" />
