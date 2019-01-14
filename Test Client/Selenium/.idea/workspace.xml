@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EmailUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/email.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stuff/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resources/chromedriver.exe" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,36 +111,44 @@
     <session id="2076908807">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="784" />
+          <entry key="java" value="3126" />
           <entry key="xml" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="784" />
+          <entry key="JAVA" value="3125" />
+          <entry key="RegExp" value="1" />
           <entry key="XML" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="9" />
+          <entry key="class" value="11" />
           <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="9" />
+          <entry key="CLASS" value="11" />
           <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
@@ -165,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
+            <state relative-caret-position="646">
+              <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,8 +180,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+            <state relative-caret-position="503">
+              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -227,10 +242,22 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="FIT-Website-Selenium-Test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="545" />
+    <option name="y" value="-8" />
+    <option name="width" value="807" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -238,6 +265,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -280,8 +309,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,7 +316,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542823065196" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../FIT-Website-TestProject/Selenium" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -315,39 +342,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.RegisterIT">
-    <configuration name="BaseDataIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FIT-Website-Selenium-Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.test.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Selenium" />
-      <option name="MAIN_CLASS_NAME" value="Selenium.BaseDataIT" />
-      <option name="METHOD_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BaseDataIT.TEST002_FirmennameÄndern" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FIT-Website-Selenium-Test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.test.java.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Selenium" />
-      <option name="MAIN_CLASS_NAME" value="Selenium.BaseDataIT" />
-      <option name="METHOD_NAME" value="TEST002_FirmennameÄndern" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="PARAMETERS" value="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RegisterIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIT-Website-Selenium-Test" />
       <extension name="coverage">
@@ -360,6 +354,22 @@
       <option name="MAIN_CLASS_NAME" value="Selenium.RegisterIT" />
       <option name="METHOD_NAME" value="" />
       <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterIT.TEST00101_NameExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIT-Website-Selenium-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Selenium" />
+      <option name="MAIN_CLASS_NAME" value="Selenium.RegisterIT" />
+      <option name="METHOD_NAME" value="TEST00101_NameExists" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -381,7 +391,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegisterIT.TEST002_GETCODE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RegisterIT.TEST003_GETCODE" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIT-Website-Selenium-Test" />
       <extension name="coverage">
         <pattern>
@@ -391,26 +401,42 @@
       </extension>
       <option name="PACKAGE_NAME" value="Selenium" />
       <option name="MAIN_CLASS_NAME" value="Selenium.RegisterIT" />
-      <option name="METHOD_NAME" value="TEST002_GETCODE" />
+      <option name="METHOD_NAME" value="TEST003_GETCODE" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterIT.TEST004_Read" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FIT-Website-Selenium-Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Selenium" />
+      <option name="MAIN_CLASS_NAME" value="Selenium.RegisterIT" />
+      <option name="METHOD_NAME" value="TEST004_Read" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.BaseDataIT.TEST002_FirmennameÄndern" />
-      <item itemvalue="JUnit.BaseDataIT" />
       <item itemvalue="JUnit.RegisterIT" />
       <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
-      <item itemvalue="JUnit.RegisterIT.TEST002_GETCODE" />
+      <item itemvalue="JUnit.RegisterIT.TEST003_GETCODE" />
+      <item itemvalue="JUnit.RegisterIT.TEST00101_NameExists" />
+      <item itemvalue="JUnit.RegisterIT.TEST004_Read" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RegisterIT" />
+        <item itemvalue="JUnit.RegisterIT.TEST004_Read" />
         <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
-        <item itemvalue="JUnit.RegisterIT.TEST002_GETCODE" />
-        <item itemvalue="JUnit.BaseDataIT" />
-        <item itemvalue="JUnit.BaseDataIT.TEST002_FirmennameÄndern" />
+        <item itemvalue="JUnit.RegisterIT.TEST00101_NameExists" />
+        <item itemvalue="JUnit.RegisterIT.TEST003_GETCODE" />
       </list>
     </recent_temporary>
   </component>
@@ -441,49 +467,88 @@
       <workItem from="1544642211567" duration="257000" />
       <workItem from="1544643061730" duration="1542000" />
       <workItem from="1544699420844" duration="7800000" />
-      <workItem from="1544711821473" duration="346000" />
+      <workItem from="1544711821473" duration="2230000" />
+      <workItem from="1545037429138" duration="5142000" />
+      <workItem from="1545052671404" duration="510000" />
+      <workItem from="1545221124136" duration="5673000" />
+      <workItem from="1546848995751" duration="5163000" />
+      <workItem from="1546856000835" duration="1121000" />
+      <workItem from="1547141978619" duration="5588000" />
+      <workItem from="1547454119228" duration="309000" />
+      <workItem from="1547457139880" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 25m 49s.xml">
+    <history-entry file="RegisterIT_TEST001_Register - 2019.01.10 at 18h 46m 35s.xml">
+      <configuration name="RegisterIT.TEST001_Register" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 18m 14s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 28m 15s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 29m 21s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 29m 57s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 30m 06s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 33m 03s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 31m 31s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 35m 29s.xml">
+    <history-entry file="RegisterIT_TEST004_Read - 2019.01.10 at 19h 32m 36s.xml">
+      <configuration name="RegisterIT.TEST004_Read" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 36m 25s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 37m 46s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 44m 59s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 39m 33s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 19h 49m 49s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 42m 53s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 14h 43m 42s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2018.12.13 at 15h 44m 06s.xml">
+    <history-entry file="RegisterIT - 2019.01.10 at 20h 02m 58s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43958000" />
+    <option name="totallyTimeSpent" value="69946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.36762482" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.25510204" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3282313" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32142857" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Maven Projects" order="6" weight="0.32980332" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32526475" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -513,7 +578,7 @@
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -526,7 +591,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java</url>
-          <line>71</line>
+          <line>93</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -556,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1187">
@@ -571,6 +629,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/EmailUtils.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -580,18 +645,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="57" column="110" selection-start-line="57" selection-start-column="110" selection-end-line="57" selection-end-column="110" />
+        <state relative-caret-position="646">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
+        <state relative-caret-position="503">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
