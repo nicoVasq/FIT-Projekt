@@ -7,7 +7,7 @@ In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um 
 
 <img src="Images/FitWebsite_Simple.png" />
 
-### Verwendete Software
+### Wir programmieren mit ...
 <img src="Images/protractor.png" /> <img src="Images/Selenium-Logo.png" />
 
 ### Plakat
