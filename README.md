@@ -1,5 +1,8 @@
 # FIT-Projekt
 
+In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um Fehler bei den Kunden zu vermeiden.
+
+
 ### Architecture for testing
 
 <img src="Images/FitWebsite_Simple.png" />
