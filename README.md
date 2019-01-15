@@ -3,7 +3,7 @@
 In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um Fehler bei den Kunden zu vermeiden.
 
 
-### Wir testen das Project mit einem ausenstehenden Java Selenium Program
+### Wir testen das Projekt mit einem ausenstehenden Java Selenium Programm
 
 <img src="Images/FitWebsite_Simple.png" />
 
