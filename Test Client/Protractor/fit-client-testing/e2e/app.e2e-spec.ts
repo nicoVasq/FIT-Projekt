@@ -4,12 +4,14 @@ import {queue} from 'rxjs/internal/scheduler/queue';
 
 describe('log-file-explorer-client App', function () {
 
-  let token: string = '4565-398E-75A6';
+  let token: string = '4748-1169-2F3D';
+  // let token: string = 'Firm-enTo-ken1';
   let parts: string[] = token.split('-');
 
 
   beforeAll(() => {
     browser.manage().window().maximize();
+    // browser.driver.manage().window().setSize(1280, 1024);
   });
 
 
@@ -25,8 +27,11 @@ describe('log-file-explorer-client App', function () {
     Helper.pressButton('btnFitRegister');
     browser.waitForAngular();
 
-    await browser.executeScript('window.scrollTo(0,700);');
+    /*
+    await browser.executeScript('window.scrollTo(0,700);').then(function () {
 
+    });
+    */
     Helper.pressButton('btnNext');
     browser.waitForAngular();
     await browser.executeScript('window.scrollTo(0,0);');
