@@ -55,6 +55,6 @@ Tests werden ausgeführt mit `protractor protractor.conf.js`
 ### Wir programmieren mit ...
 <img src="Images/protractor.png" /> <img src="Images/Selenium-Logo.png" />
 
-### Plakat
+### :art: Plakat
 
 <img src="Images/Plakat.png" />
