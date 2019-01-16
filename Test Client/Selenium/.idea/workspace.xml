@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="New Test 005" />
+    <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="New Test 005">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,153 +13,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1648812091">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="properties" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="Properties" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="5530" />
-          <entry key="xml" value="4" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="5530" />
-          <entry key="XML" value="4" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-42403152">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="2" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="27" />
-          <entry key="java" value="306" />
-          <entry key="txt" value="1" />
-          <entry key="xml" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="306" />
-          <entry key="PLAIN_TEXT" value="28" />
-          <entry key="XML" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="java" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1899839011">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="44" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="44" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="2076908807">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="15" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.23" value="1" />
-          <entry key="project.open.time.26" value="2" />
-          <entry key="project.open.time.28" value="1" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.31" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.46" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.51" value="1" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.72" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="20" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="3187" />
-          <entry key="xml" value="49" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="3186" />
-          <entry key="RegExp" value="1" />
-          <entry key="XML" value="49" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="11" />
-          <entry key="java" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="11" />
-          <entry key="JAVA" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
-=======
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_DATA_SOURCES" value="true" />
@@ -170,7 +26,6 @@
     </option>
     <expand />
     <select />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -186,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
+            <state relative-caret-position="646">
               <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -198,13 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="131">
-              <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-=======
-            <state relative-caret-position="1278">
-              <caret line="208" column="12" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="12" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
+            <state relative-caret-position="139">
+              <caret line="203" column="53" selection-start-line="203" selection-start-column="53" selection-end-line="203" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -262,17 +112,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-<<<<<<< HEAD
-    <option name="x" value="538" />
-    <option name="y" value="57" />
-    <option name="width" value="807" />
-    <option name="height" value="543" />
-=======
     <option name="x" value="200" />
     <option name="y" value="-15" />
     <option name="width" value="1000" />
     <option name="height" value="750" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -281,62 +124,16 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-<<<<<<< HEAD
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FITWebsiteSeleniumTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Selenium" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-=======
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547664240837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547667633440" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Stütz/SimpleWebsite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -361,7 +158,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RegisterIT.TEST005_SignIn">
+  <component name="RunManager" selected="JUnit.RegisterIT">
     <configuration name="RegisterIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FIT-Website-Selenium-Test" />
       <extension name="coverage">
@@ -453,8 +250,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RegisterIT.TEST005_SignIn" />
         <item itemvalue="JUnit.RegisterIT" />
+        <item itemvalue="JUnit.RegisterIT.TEST005_SignIn" />
         <item itemvalue="JUnit.RegisterIT.TEST001_Register" />
         <item itemvalue="JUnit.RegisterIT.TEST004_Read" />
         <item itemvalue="JUnit.RegisterIT.TEST00101_NameExists" />
@@ -498,18 +295,15 @@
       <workItem from="1547454119228" duration="309000" />
       <workItem from="1547457139880" duration="598000" />
       <workItem from="1547484990112" duration="1047000" />
-<<<<<<< HEAD
-      <workItem from="1547487811655" duration="1650000" />
-      <workItem from="1547550658485" duration="153000" />
-      <workItem from="1547551539962" duration="607000" />
-      <workItem from="1547579490085" duration="3166000" />
-      <workItem from="1547661664954" duration="3270000" />
-=======
       <workItem from="1547487811655" duration="1033000" />
       <workItem from="1547549146051" duration="2027000" />
       <workItem from="1547660618816" duration="170000" />
       <workItem from="1547661012058" duration="3227000" />
       <workItem from="1547664321023" duration="130000" />
+      <workItem from="1547664496113" duration="132000" />
+      <workItem from="1547664696287" duration="177000" />
+      <workItem from="1547666394662" duration="31000" />
+      <workItem from="1547666658290" duration="973000" />
     </task>
     <task id="LOCAL-00001" summary="New Test 005">
       <created>1547664378274</created>
@@ -517,71 +311,18 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1547664378274</updated>
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Test 005">
+      <created>1547664537483</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1547664537483</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-<<<<<<< HEAD
-    <history-entry file="RegisterIT - 2019.01.10 at 20h 02m 58s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST001_Register - 2019.01.14 at 18h 45m 29s.xml">
-      <configuration name="RegisterIT.TEST001_Register" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.14 at 18h 46m 47s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.14 at 18h 56m 24s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.15 at 12h 27m 02s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.15 at 21h 27m 13s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.15 at 21h 43m 08s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.15 at 21h 48m 07s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.16 at 19h 09m 06s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.16 at 19h 18m 51s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79867000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41149774" />
-=======
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 27m 25s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 28m 02s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 29m 27s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 30m 27s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 32m 23s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 33m 29s.xml">
-      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 34m 18s.xml">
       <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
     </history-entry>
@@ -594,16 +335,33 @@
     <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 19h 43m 27s.xml">
       <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 20h 28m 40s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 20h 30m 09s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 20h 31m 53s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 20h 37m 50s.xml">
+      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT_TEST005_SignIn - 2019.01.16 at 20h 38m 39s.xml">
+      <configuration name="RegisterIT.TEST005_SignIn" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 20h 40m 16s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77580000" />
+    <option name="totallyTimeSpent" value="78893000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2865772" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30201343" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -613,13 +371,8 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-<<<<<<< HEAD
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.24319728" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
-=======
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.25475842" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.25475842" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39824304" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -675,32 +428,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-<<<<<<< HEAD
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java</url>
-          <line>125</line>
-          <properties />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-=======
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Test 005" />
     <option name="LAST_COMMIT_MESSAGE" value="New Test 005" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/email.properties" />
@@ -748,16 +478,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
+        <state relative-caret-position="646">
           <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -767,13 +490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="131">
-          <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
-=======
-        <state relative-caret-position="1278">
-          <caret line="208" column="12" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="12" />
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
+        <state relative-caret-position="139">
+          <caret line="203" column="53" selection-start-line="203" selection-start-column="53" selection-end-line="203" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

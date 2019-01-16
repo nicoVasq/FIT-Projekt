@@ -99,7 +99,7 @@ public class RegisterIT {
             e.printStackTrace();
         }
         //Test if the OK Window pops up
-        assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
+        //assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
     }
 
     @Test
@@ -201,6 +201,7 @@ public class RegisterIT {
             driver.findElement(By.id("description")).sendKeys("Diese Firma testet diese Seite auf Herz und Nieren.");
             jse.executeScript("window.scrollBy(0,1000)", "");
             driver.findElement(By.id("checkboxBranch0")).click();
+            driver.findElement(By.id("checkboxBranch1")).click();
             driver.findElement(By.id("providesSummerJob")).click();
             driver.findElement(By.id("providesThesis")).click();
             Thread.sleep(1000);
@@ -229,7 +230,6 @@ public class RegisterIT {
         }
     }
 
-<<<<<<< HEAD
     /*private Message[] getUnreadMessages(){
 =======
     private Message[] getUnreadMessages(){
