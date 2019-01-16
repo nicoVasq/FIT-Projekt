@@ -123,7 +123,17 @@ public class RegisterIT {
         String emailContent = "";
         driver.get("http://localhost:4200");
         try {
-            Message messages[] = getUnreadMessages();
+            Message messages[];
+            Properties properties = new Properties();
+            properties.setProperty("imap.googlemail.com","imaps");
+            Session se = Session.getDefaultInstance(properties);
+            Store store = se.getStore("imaps");
+            store.connect("imap.gmail.com","fit.website.testing.l@gmail.com","testingPassword");
+            Folder folder = store.getFolder("INBOX");
+            folder.open(Folder.READ_WRITE);
+            messages = folder.search(new FlagTerm(new Flags(Flags.Flag.SEEN), false));
+            folder.setFlags(messages,new Flags(Flags.Flag.SEEN),true);
+
             for (Message m:messages)
                 if(m.getSubject().contains("Ihr Firmenantrag wurde akzeptiert"))
                     emailContent = m.getContent().toString();
@@ -143,12 +153,17 @@ public class RegisterIT {
             assertTrue(driver.findElement(By.cssSelector(".toast-container")).isDisplayed());
 
             System.out.println("FirmenToken: " + FirmenToken);
-        }catch (NoSuchProviderException e) {
-            e.printStackTrace();
+            folder.close(false);
+            store.close();
+        }catch (NoSuchProviderException ex) {
+            ex.printStackTrace();
+            Assert.fail(ex.getMessage());
         }catch (MessagingException ex){
             ex.printStackTrace();
+            Assert.fail(ex.getMessage());
         }catch(IOException ex){
             ex.printStackTrace();
+            Assert.fail(ex.getMessage());
         }
     }
     /*@Test
@@ -167,7 +182,7 @@ public class RegisterIT {
         }
     }*/
 
-    private Message[] getUnreadMessages(){
+    /*private Message[] getUnreadMessages(){
         Message[] messages = null;
         try {
             /*SearchTerm term = new SearchTerm() {
@@ -181,23 +196,13 @@ public class RegisterIT {
                     }
                     return false;
                 }
-            };*/
-            Properties properties = new Properties();
-            properties.setProperty("imap.googlemail.com","imaps");
-            Session se = Session.getDefaultInstance(properties);
-            Store store = se.getStore("imaps");
-            store.connect("imap.gmail.com","fit.website.testing.l@gmail.com","testingPassword");
-            Folder folder = store.getFolder("INBOX");
-            folder.open(Folder.READ_WRITE);
-            messages = folder.search(new FlagTerm(new Flags(Flags.Flag.SEEN), false));
-            folder.setFlags(messages,new Flags(Flags.Flag.SEEN),true);
-            folder.close(false);
-            store.close();
+            };
+
         } catch (NoSuchProviderException ex) {
             ex.printStackTrace();
         }catch (MessagingException ex){
             ex.printStackTrace();
         }
-        return messages;
-    }
+        return messages;*/
+    //}
 }

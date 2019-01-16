@@ -111,32 +111,36 @@
     <session id="2076908807">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.26" value="2" />
+          <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.51" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3127" />
+          <entry key="java" value="3187" />
           <entry key="xml" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3126" />
+          <entry key="JAVA" value="3186" />
           <entry key="RegExp" value="1" />
           <entry key="XML" value="49" />
         </counts>
@@ -169,7 +173,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
+            <state relative-caret-position="54">
               <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -181,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+            <state relative-caret-position="131">
+              <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -254,11 +258,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="126" />
-    <option name="y" value="42" />
-    <option name="width" value="1163" />
-    <option name="height" value="769" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="538" />
+    <option name="y" value="57" />
+    <option name="width" value="807" />
+    <option name="height" value="543" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -267,7 +271,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +313,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,7 +321,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542823065196" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Stütz/SimpleWebsite" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -478,29 +482,15 @@
       <workItem from="1547454119228" duration="309000" />
       <workItem from="1547457139880" duration="598000" />
       <workItem from="1547484990112" duration="1047000" />
-      <workItem from="1547487811655" duration="1033000" />
+      <workItem from="1547487811655" duration="1650000" />
+      <workItem from="1547550658485" duration="153000" />
+      <workItem from="1547551539962" duration="607000" />
+      <workItem from="1547579490085" duration="3166000" />
+      <workItem from="1547661664954" duration="3270000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RegisterIT - 2019.01.10 at 19h 30m 06s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.10 at 19h 31m 31s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT_TEST004_Read - 2019.01.10 at 19h 32m 36s.xml">
-      <configuration name="RegisterIT.TEST004_Read" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.10 at 19h 36m 25s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.10 at 19h 44m 59s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RegisterIT - 2019.01.10 at 19h 49m 49s.xml">
-      <configuration name="RegisterIT" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RegisterIT - 2019.01.10 at 20h 02m 58s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
@@ -513,15 +503,33 @@
     <history-entry file="RegisterIT - 2019.01.14 at 18h 56m 24s.xml">
       <configuration name="RegisterIT" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RegisterIT - 2019.01.15 at 12h 27m 02s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.15 at 21h 27m 13s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.15 at 21h 43m 08s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.15 at 21h 48m 07s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 19h 09m 06s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegisterIT - 2019.01.16 at 19h 18m 51s.xml">
+      <configuration name="RegisterIT" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72026000" />
+    <option name="totallyTimeSpent" value="79867000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="42" width="1163" height="769" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4605621" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41149774" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -531,7 +539,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32993197" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.25611746" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.24319728" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39965987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,6 +606,12 @@
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java</url>
+          <line>125</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -646,16 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -663,10 +667,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+        <state relative-caret-position="131">
+          <caret line="105" column="38" lean-forward="true" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
