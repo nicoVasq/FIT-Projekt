@@ -7,7 +7,7 @@ In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um 
 
 <img src="Images/FitWebsite_Simple.png" />
 
-## Setup 
+## :gear: Setup 
 Für die Installationen wird der **[Node Package Manager](https://nodejs.org/en/download/)** benötigt 
 ### Client (Angular Applikation)
 Die benötigten Dependencies bekommen:\
