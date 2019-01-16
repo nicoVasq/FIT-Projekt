@@ -167,6 +167,53 @@ public class RegisterIT {
         }
     }*/
 
+    @Test
+    public void TEST005_SignIn() {
+        try {
+            FirmenToken = "C751-49A0-1D7F";
+            driver.get("http://localhost:4200");
+            driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
+            driver.findElement(By.id("btnFitRegister")).click();
+            Thread.sleep(3000);
+            jse.executeScript("window.scrollBy(0,1000)", "");
+            driver.findElement(By.id("btnNext")).click();
+            Thread.sleep(2000);
+
+            driver.findElement(By.id("phoneNumber")).sendKeys("0123456789");
+            driver.findElement(By.id("email")).sendKeys("TestFirma1@gmail.com");
+            driver.findElement(By.id("homepage")).sendKeys("www.htl-leonding.at");
+            driver.findElement(By.id("branch")).sendKeys("Testen");
+            driver.findElement(By.id("description")).sendKeys("Diese Firma testet diese Seite auf Herz und Nieren.");
+            jse.executeScript("window.scrollBy(0,1000)", "");
+            driver.findElement(By.id("checkboxBranch0")).click();
+            driver.findElement(By.id("providesSummerJob")).click();
+            driver.findElement(By.id("providesThesis")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.id("btnNext")).click();
+            Thread.sleep(2000);
+
+            driver.findElement(By.id("representativeName0")).sendKeys("Max Mustertester");
+            driver.findElement(By.id("representativeEmail0")).sendKeys("Mustertester@gmail.com");
+            jse.executeScript("window.scrollBy(0,1000)", "");
+            driver.findElement(By.id("btnNext")).click();
+            Thread.sleep(2000);
+
+            jse.executeScript("window.scrollBy(0,1000)", "");
+            driver.findElement(By.id("btnNext")).click();
+            Thread.sleep(2000);
+
+            jse.executeScript("window.scrollBy(0,1000)", "");
+            driver.findElement(By.id("acceptTerms")).click();
+            driver.findElement(By.id("btnSubmitBooking")).click();
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//button[contains(text(),'Anmeldung durchführen')]")).click();
+            Thread.sleep(3000);
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
     private Message[] getUnreadMessages(){
         Message[] messages = null;
         try {
