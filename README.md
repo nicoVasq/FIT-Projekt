@@ -7,13 +7,20 @@ In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um 
 
 <img src="Images/FitWebsite_Simple.png" />
 
-## Setup  
-### [Protractor](https://www.protractortest.org/#/)
+## Setup 
+Für die Installationen wird der **[Node Package Manager](https://nodejs.org/en/download/)** benötigt 
+### Client (Angular Applikation)
+Die benötigten Dependencies bekommen:\
+`npm install`  
+Client starten:\
+`ng serve`
+
+### [Protractor](https://www.protractortest.org/#/) 
 Protractor is ein end-to-end testing Framework für Angular/Angular JS Applikationen.\
 Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 - **Protractor-Setup:**
     
-    Mit [Npm (+Node JS)](https://nodejs.org/en/download/) Protractor + Jasmine installieren:
+    Mit **[Npm (+Node JS)](https://nodejs.org/en/download/)** Protractor + Jasmine installieren:
     ```
     # Local installation:
     npm install --save-dev protractor
@@ -24,16 +31,18 @@ Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
     ```
     npm install --save @types/jasminewd2
     ```
-    [Selenium](https://www.seleniumhq.org/) standalone server (wird von Protractor benötigt)
+    **[Selenium](https://www.seleniumhq.org/)** standalone server (wird von Protractor benötigt):
     ```
     webdriver-manager update
     ```
-    Benötigte Library
+    Benötigte Library:
     ```
     npm install --save @types/core-js
     ```
 
-    Tests werden ausgeführt mit `protractor protractor.conf.js`
+Tests werden ausgeführt mit `protractor protractor.conf.js`
+
+### Selenium Client
 
 ### Wir programmieren mit ...
 <img src="Images/protractor.png" /> <img src="Images/Selenium-Logo.png" />
