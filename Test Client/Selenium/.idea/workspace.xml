@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java" afterDir="false" />
-    </list>
+    <list default="true" id="1cc2d102-961b-4978-a9ce-1095ac693df9" name="Default Changelist" comment="New Test 005" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="765">
               <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,7 +50,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1225">
+            <state relative-caret-position="1278">
               <caret line="208" column="12" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -124,8 +121,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,7 +296,16 @@
       <workItem from="1547549146051" duration="2027000" />
       <workItem from="1547660618816" duration="170000" />
       <workItem from="1547661012058" duration="3227000" />
+      <workItem from="1547664321023" duration="130000" />
     </task>
+    <task id="LOCAL-00001" summary="New Test 005">
+      <created>1547664378274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1547664378274</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -335,13 +341,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77450000" />
+    <option name="totallyTimeSpent" value="77580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28255033" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2865772" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -408,6 +414,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New Test 005" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Test 005" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/email.properties" />
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/requests/FilterRequest.class">
@@ -456,7 +466,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/BaseDataIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="765">
           <caret line="47" column="46" selection-start-line="47" selection-start-column="46" selection-end-line="47" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -466,7 +476,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Selenium/RegisterIT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1225">
+        <state relative-caret-position="1278">
           <caret line="208" column="12" selection-start-line="208" selection-start-column="12" selection-end-line="208" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
