@@ -15,6 +15,14 @@ Die benötigten Dependencies bekommen:\
 Client starten:\
 `ng serve`
 
+### Server  (Visual Studio Solution)
+Wenn Datenbank nicht aktuell, `Update-Database` in der NuGet Package Manager Console ausführen
+- Im Startup.cs muss **InitDb(provider);** auskommentiert sein damit das Update-Command
+funktioniert. Danach wieder entkommentieren damit Testdaten erstellt werden.
+- wenn Model nicht up-to-date zuvor noch eine Migration erstellen: `Add-Migration`
+
+In Visual Studio oben **Backend** auswählen und ausführen.
+
 ### [Protractor](https://www.protractortest.org/#/) 
 Protractor is ein end-to-end testing Framework für Angular/Angular JS Applikationen.\
 Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
