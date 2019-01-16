@@ -182,13 +182,10 @@ public class RegisterIT {
         }
     }*/
 
-<<<<<<< HEAD
-    /*private Message[] getUnreadMessages(){
-=======
     @Test
     public void TEST005_SignIn() {
         try {
-            FirmenToken = "C751-49A0-1D7F";
+           
             driver.get("http://localhost:4200");
             driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
             driver.findElement(By.id("btnFitRegister")).click();
@@ -232,6 +229,9 @@ public class RegisterIT {
         }
     }
 
+<<<<<<< HEAD
+    /*private Message[] getUnreadMessages(){
+=======
     private Message[] getUnreadMessages(){
 >>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
         Message[] messages = null;
