@@ -1,8 +1,9 @@
 # FIT-Projekt
 
 In unserem Schulprojekt werden wir die Firmen-Informations-Tags Seite Testen um Fehler bei den Kunden zu vermeiden.
-Hierbei wird automatisiert getestet (mit Selenium - Regressionstest), genauso wie manuell,da es sich bei manchen Use-Cases nicht lohnt sie zu automatisieren (Beispielsweise Admintool) 
+Hierbei wird automatisiert getestet (mit Selenium - Regressionstest), genauso wie manuell, da es sich bei manchen Use-Cases nicht lohnt sie zu automatisieren (Beispielsweise Admintool) 
 
+Als Test-Browser wird Google Chrome benützt - mit dem Chrome Webdriver von Selenium 
 
 ### Wir testen das Projekt mit einem ausenstehenden Java Selenium Programm
 
