@@ -1,6 +1,5 @@
 import { Helper } from './app.po';
 import { browser, by, element, protractor } from 'protractor';
-import {queue} from 'rxjs/internal/scheduler/queue';
 
 describe('log-file-explorer-client App', function () {
 
@@ -11,7 +10,6 @@ describe('log-file-explorer-client App', function () {
 
   beforeAll(() => {
     browser.manage().window().maximize();
-    // browser.driver.manage().window().setSize(1280, 1024);
   });
 
 
