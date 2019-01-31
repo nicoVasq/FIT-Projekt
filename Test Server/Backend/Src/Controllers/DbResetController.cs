@@ -21,7 +21,6 @@ namespace Backend.Src.Controllers
         public DbResetController(IUnitOfWork uow)
         {
             _uow = uow;
-            
         }
 
         [HttpGet]
