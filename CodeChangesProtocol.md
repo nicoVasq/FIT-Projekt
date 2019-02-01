@@ -2,7 +2,7 @@
 ## Client 
  - app.component.html
 ``` html
-<div class="fixed-bottom ml-2"   style="width: 500px`">
+<div class="fixed-bottom ml-2"   style="width: 500px">
   <span class="bg-danger" style="color: #caff9c">
     very secret dev area:
     <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
