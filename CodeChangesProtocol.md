@@ -56,23 +56,63 @@ namespace Backend.Src.Controllers
     [Controller]
     public class DbResetController : Controller
     {
-        private IUnitOfWork _unitOfWork;
+        private IUnitOfWork _uow;
 
         public DbResetController(IUnitOfWork uow)
         {
-            _unitOfWork = uow;
+            _uow = uow;
         }
 
         [HttpGet]
         public void DeleteDbRequest()
         {
-            _uow.ContactRepository.Delete(_uow.ContactRepository.Count());
-            _uow.AddressRepository.Delete(_uow.AddressRepository.Count());
-            _uow.CompanyBranchRepository.Delete(_uow.CompanyBranchRepository.Count());
-            _uow.CompanyRepository.Delete(_uow.CompanyRepository.Count());
+            Booking booking = _uow.BookingRepository.Get().Last();
+            Company company = _uow.CompanyRepository.Get().Last();
+
+            var bookingBranches = _uow.BookingBranchesRepository.Get().Where(br => br.fk_Booking == booking.Id);
+            foreach (var item in bookingBranches)
+            {
+                _uow.BookingBranchesRepository.Delete(item);
+            }
+
+            var companyBranch = _uow.CompanyBranchRepository.Get().Where(cb => cb.fk_Company == company.Id);
+            foreach (var item in companyBranch)
+            {
+                _uow.CompanyBranchRepository.Delete(item);
+            }
+
+            var resourceBooking = _uow.ResourceBookingRepository.Get().Where(rb => rb.fk_Booking == booking.Id);
+            foreach (var item in resourceBooking)
+            {
+                _uow.ResourceBookingRepository.Delete(item);
+            }
+
+            foreach (var item in booking.Representatives)
+            {
+                _uow.RepresentativeRepository.Delete(item);
+            }
+
+
+            var contacts = _uow.ContactRepository.Get().Where(c => c.Id == company.fk_Contact);
+            foreach (var item in contacts)
+            {
+                _uow.ContactRepository.Delete(item);
+            }
+
+            _uow.AddressRepository.Delete(company.fk_Address);
+
+            _uow.BookingRepository.Delete(booking.Id);
+            _uow.CompanyRepository.Delete(company.Id);
+
+
+            // TODO
+            // Delete Presentation (+ PresentationBranch*)
+            // [Delete ChangeProtocol*]
 
             _uow.Save();
+
         }
     }
 }
+
 ```
