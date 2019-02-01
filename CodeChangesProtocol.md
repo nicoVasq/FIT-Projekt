@@ -12,10 +12,9 @@
   </span>
 </div
 ```
-Added 
-- `style="width: 500px`
-- `<button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>`
-
+Added   
+  `style="width: 500px`  
+  `<button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>`
 
 
 - app.component.ts
