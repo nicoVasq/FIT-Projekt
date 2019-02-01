@@ -1,9 +1,22 @@
 # Code Änderungen um die DB über REST löschen zu können
 ## Client 
  - app.component.html
-```html
-<button (click)="SendDbMigrateRequest()">Reset DB</button>
+``` html
+<div class="fixed-bottom ml-2"   style="width: 500px`">
+  <span class="bg-danger" style="color: #caff9c">
+    very secret dev area:
+    <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
+    <a [routerLink]="['/']">FIT</a> |
+    <a [routerLink]="['/konto/login']">ACCOUNT</a> |
+    <button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>
+  </span>
+</div
 ```
+Added 
+- `style="width: 500px`
+- `<button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>`
+
+
 
 - app.component.ts
 ```ts
