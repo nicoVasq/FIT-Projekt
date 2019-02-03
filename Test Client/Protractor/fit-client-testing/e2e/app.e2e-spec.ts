@@ -3,10 +3,9 @@ import { browser, by, element, protractor } from 'protractor';
 
 describe('log-file-explorer-client App', function () {
 
-  let token: string = '4748-1169-2F3D';
+  let token: string = '186F-BCF2-1874';
   // let token: string = 'Firm-enTo-ken1';
-  let parts: string[] = token.split('-');
-
+  // let parts: string[] = token.split('-');
 
   beforeAll(() => {
     browser.manage().window().maximize();
@@ -17,9 +16,7 @@ describe('log-file-explorer-client App', function () {
     Helper.navigateTo('/');
 
     // Step 1
-    element(by.id('code-part1')).sendKeys(parts[0]);
-    element(by.id('code-part2')).sendKeys(parts[1]);
-    element(by.id('code-part3')).sendKeys(parts[2]);
+    element(by.id('code-part1')).sendKeys(token);
 
     // await
     Helper.pressButton('btnFitRegister');
