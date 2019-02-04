@@ -26,8 +26,8 @@ namespace Backend.Src.Controllers
         [HttpGet]
         public void DeleteDbRequest()
         {
-            Booking booking = _uow.BookingRepository.Get().Last();
-            Company company = _uow.CompanyRepository.Get().Last();
+            Booking booking = _uow.BookingRepository.Get().OrderBy(b => b.Id).Last();
+            Company company = _uow.CompanyRepository.Get().OrderBy(c => c.Id).Last();
 
             var bookingBranches = _uow.BookingBranchesRepository.Get().Where(br => br.fk_Booking == booking.Id);
             foreach (var item in bookingBranches)
@@ -52,17 +52,16 @@ namespace Backend.Src.Controllers
                 _uow.RepresentativeRepository.Delete(item);
             }
 
+            _uow.AddressRepository.Delete(company.fk_Address);  
 
-            var contacts = _uow.ContactRepository.Get().Where(c => c.Id == company.fk_Contact);
+            _uow.BookingRepository.Delete(booking.Id);
+            _uow.CompanyRepository.Delete(company.Id);
+
+            var contacts = _uow.ContactRepository.Get().Where(c => c.Id == company.fk_Contact || c.Id == booking.fk_Contact);
             foreach (var item in contacts)
             {
                 _uow.ContactRepository.Delete(item);
             }
-
-            _uow.AddressRepository.Delete(company.fk_Address);
-
-            _uow.BookingRepository.Delete(booking.Id);
-            _uow.CompanyRepository.Delete(company.Id);
 
 
             // TODO
