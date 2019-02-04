@@ -1,0 +1,46 @@
+@import "../../../../styles/fit-global-styles";
+
+.mail-select {
+  min-width: 250px;
+  border: $main-border;
+}
+
+.template-editor {
+  min-height: 400px;
+}
+
+.mail-edit-button {
+  min-width: 250px;
+  margin: 10px 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.text-placeholder {
+  height: 1.2rem;
+}
+
+.variable-container {
+  min-width: 200px;
+  max-width: 300px;
+
+  .height-restriction{
+    max-height: 460px;
+  }
+
+  .variable-item {
+    cursor: pointer;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+
+    &:active {
+      box-shadow: none;
+      background-color: lighten(lightgrey, 10%);
+    }
+  }
+}
+

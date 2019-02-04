@@ -1,0 +1,112 @@
+<div class="small-container mt-5 mb-9"
+     *ngIf="company != null">
+
+  <fit-company-overview [(company)]="company"
+                        [isAdminVersion]="true">
+  </fit-company-overview>
+
+  <hr>
+
+  <div class="d-flex mt-4">
+
+    <!--member-->
+    <div>
+      <h3 class="text-bold">Mitglieder-Status</h3>
+
+      <div class="row">
+        <div class="col-md-4 d-flex align-items-center">
+          <label class="m-0">Mitgliedsstatus: </label>
+        </div>
+        <div class="col-md-8 dropdown w-100">
+          <button id="dropdownMenuButton"
+                  class="btn btn-light dropdown-toggle fit-border w-100"
+                  type="button" data-toggle="dropdown">
+            {{ company.memberStatus.name }}
+          </button>
+          <div class="dropdown-menu">
+            <a *ngFor="let memberStatus of memberStati"
+               [ngClass]="{'selected': memberStatus.id == company.memberStatus.id}"
+               class="dropdown-item"
+               (click)="changeMemberStatus(memberStatus)">
+              {{ memberStatus.name }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-md-4 d-flex align-items-center">
+          <label class="m-0">Mitgliedsbeitrag: </label>
+        </div>
+
+        <div class="col-md-8 input-group mb-3">
+          <input type="number"
+                 class="form-control"
+                 title="memberPaymentAmount"
+                 (keydown)="this.unsavedChangesExist = true"
+                 [(ngModel)]="company.memberPaymentAmount">
+          <div class="input-group-append">
+            <span class="input-group-text">€</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="btn btn-success text-bold ml-auto align-self-start"
+            [disabled]="!doUnsavedChangesExist()"
+            (click)="updateCompany()">
+      <i class="fa fa-download mr-1"></i>
+      Änderungen übernehmen
+    </button>
+  </div>
+
+  <!--tags-->
+  <h3 class="text-bold mt-2">Tags</h3>
+
+  <div class="d-flex">
+    <div class="fit-border tag-search-container">
+      <input type="text"
+             title="tagSearchBar"
+             class="form-control form-control-lg search-bar"
+             placeholder=" &#xf002; Suche"
+             [(ngModel)]="tagFilter">
+
+      <div class="tag-scroll-container">
+        <div [ngSwitch]="getFilteredTags().length == 0" class="mt-2">
+          <div *ngSwitchCase="true" class="text-muted text-center user-select-none">
+            ... es wurden keine Tags gefunden
+          </div>
+          <div *ngSwitchDefault>
+            <div *ngFor="let tag of getFilteredTags()"
+                 class="tag-item floating-effect mb-2 rounded user-select-none"
+                 (click)="addTagToCompany(tag)">
+              {{tag.value}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="ml-4">
+      <div [ngSwitch]="company.tags.length == 0" class="mt-2">
+        <div *ngSwitchCase="true" class="text-muted">
+          ... es sind keine Tags vorhanden
+        </div>
+        <div *ngSwitchDefault class="d-flex flex-wrap">
+          <div *ngFor="let tag of company.tags" class="d-flex mx-1 my-1">
+            <div class="left-badge fit-border">
+              {{tag.tag.value}}
+            </div>
+            <div class="right-badge delete-badge text-light"
+                 (click)="removeTagFromCompany(tag.tag)">
+              <i class="fa fa-times vert-middle"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

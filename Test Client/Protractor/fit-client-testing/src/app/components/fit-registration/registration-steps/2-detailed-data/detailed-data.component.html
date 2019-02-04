@@ -1,0 +1,259 @@
+<div *ngIf="isVisible">
+  <div class="mb-4">
+    <h2 class="text-bold">Details zur Firma</h2>
+    <p>Diese detaillierteren Angaben zu Ihrer Firma helfen unseren Besuchern, die passenden Firmen zu finden und Kontakt
+      aufzunehmen. Bitte seien Sie bei den gesuchten Berufen so spezifisch wie möglich.</p>
+  </div>
+
+  <form [formGroup]="formGroup">
+
+    <!--general-->
+    <div class="mb-4">
+      <h5 class="text-bold mb-3">Allgemeine Infos</h5>
+
+      <!--phoneNumber-->
+      <div class="form-group row mb-1">
+        <label for="phoneNumber" class="col-md-3 col-form-label">
+          Telefonnummer:*
+          <fit-hint-icon class="ml-1"
+                         [message]="'Diese Telefonnummer wird nur für den Fit Folder verwendert, und nicht zur Kontaktaufnahme von uns.'">
+          </fit-hint-icon>
+        </label>
+        <div class="col-md-9">
+          <input class="form-control"
+                 type="tel"
+                 formControlName="phoneNumber"
+                 id="phoneNumber"
+                 placeholder="Telefonnummer"
+                 (change)="onInputChanged()"
+                 [ngClass]="{'is-invalid': isInvalid('phoneNumber')}">
+          <div class="invalid-message invalid-message-container">
+            <span *ngIf="isEmpty('phoneNumber')">Telefonnummer darf nicht leer sein!</span>
+          </div>
+        </div>
+      </div>
+
+      <!--email and web-->
+      <div class="form-group row mb-1">
+        <label for="email" class="col-md-3 col-form-label">
+          Email:*
+          <fit-hint-icon class="ml-1"
+                         [message]="'Diese Email wird nur für den Fit Folder verwendert, und nicht zur Kontaktaufnahme von uns.'">
+          </fit-hint-icon>
+        </label>
+        <div class="col-md-9">
+          <input class="form-control"
+                 type="email"
+                 formControlName="email"
+                 id="email"
+                 placeholder="Email"
+                 (change)="onInputChanged()"
+                 [ngClass]="{'is-invalid': isInvalid('email')}">
+          <div class="invalid-message invalid-message-container">
+            <span *ngIf="isEmpty('email')" class="mr-2">E-Mail darf nicht leer sein!</span>
+            <span *ngIf="isNoMail('email') && !isEmpty('email')">Ungültige E-Mail!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-1">
+        <label for="homepage" class="col-md-3 col-form-label">Homepage:*</label>
+        <div class="col-md-9 ">
+          <input class="form-control "
+                 type="url"
+                 formControlName="homepage"
+                 id="homepage"
+                 placeholder="Homepage"
+                 (change)="onInputChanged()"
+                 [ngClass]="{'is-invalid': isInvalid('homepage')}">
+          <div class="invalid-message invalid-message-container">
+            <span *ngIf="isEmpty('homepage')">Homepage darf nicht leer sein!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row mb-1">
+        <label for="branch" class="col-md-3 col-form-label">Branche:*</label>
+        <div class="col-md-9">
+          <input class="form-control"
+                 formControlName="branch"
+                 id="branch"
+                 placeholder="Tätigkeitsfeld der Firma"
+                 (change)="onInputChanged()"
+                 [ngClass]="{'is-invalid': isInvalid('branch')}">
+
+          <div class="invalid-message invalid-message-container">
+            <div *ngIf="isEmpty('branch')">Branche darf nicht leer sein!</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="description" class="my-auto">Firmenbeschreibung:</label>
+        <fit-hint-icon class="ml-1"
+                       [message]="'Beschreiben Sie hier bitte Ihre Firma in etwa 15 Zeilen. Diese Beschreibung wird dann im FIT-Folder verwendet.'">
+        </fit-hint-icon>
+      </div>
+
+      <textarea class="form-control my-2"
+                rows="7"
+                id="description"
+                placeholder="Tätigkeitsbereich der Firma in ca. 15 Zeilen"
+                (change)="onInputChanged()"
+                [ngClass]="{'is-invalid': isInvalid('description')}"
+                formControlName="description">
+       </textarea>
+      <div class="invalid-message invalid-message-container">
+        <div *ngIf="isEmpty('description')">Firmenbeschreibung darf nicht leer sein!</div>
+        <div *ngIf="isDescriptionTooLong('description')">Die Firmenbeschreibung ist zu lang und kann nicht in den
+          FIT-Folder gedruckt werden! Bitte kürzen sie den Text oder reduzieren Sie die Anzahl der Zeilen.
+        </div>
+      </div>
+    </div>
+
+    <!--establishments-->
+    <div class="mb-4">
+      <h5 class="text-bold mb-3">Ihre Niederlassungen
+        <fit-hint-icon class="ml-1"
+                       [message]="'Geben Sie hier bitte die Orte Ihrer Niederlassungen ein (z.B. Linz, Wien, etc.). Sollte Ihr Unternehmen sehr viele Standplätze besitzen, dann können Sie auch einfach nur die Anzahl angeben.'">
+        </fit-hint-icon>
+      </h5>
+
+      <div class="form-group ">
+        <div class="d-flex mb-1">
+          <label for="establishmentsAut" class="my-auto">
+            Standorte Österreich:
+            <fit-hint-icon class="ml-1" [message]="'Die einzelnen Standorte mit ENTER bestätigen.'"></fit-hint-icon>
+          </label>
+
+          <div class="flex-filler"></div>
+
+          <label for="establishmentAutCount" class="my-auto mr-1">Anzahl:</label>
+          <input #establishmentAutCount
+                 class="number-input form-control"
+                 [value]="formGroup.value.establishmentsCountAut"
+                 (input)="verifyAutEstablishmentsCount()"
+                 (change)="onInputChanged()"
+                 id="establishmentAutCount" type="number"/>
+        </div>
+        <fit-tag-input id="establishmentsAut"
+                       [placeholder]="'Standort hinzufügen'"
+                       [secondaryPlaceholder]="'Mit Enter bestätigen'"
+                       [tags]="formGroup.value.establishmentsAut"
+                       (tagsChange)="updateEstablishments('establishmentsAut', $event)">
+        </fit-tag-input>
+      </div>
+
+      <div class="form-group">
+        <div class="d-flex mb-1">
+          <label for="establishmentsInt" class="my-auto">
+            Standorte International:
+            <fit-hint-icon class="ml-1" [message]="'Die einzelnen Standorte mit ENTER bestätigen.'"></fit-hint-icon>
+          </label>
+
+          <div class="flex-filler"></div>
+
+          <label for="establishmentIntCount" class="my-auto mr-1">Anzahl:</label>
+          <input #establishmentIntCount
+                 class="number-input form-control"
+                 [value]="formGroup.value.establishmentsCountInt"
+                 (input)="verifyIntEstablishmentsCount()"
+                 id="establishmentIntCount" type="number"/>
+        </div>
+        <fit-tag-input id="establishmentsInt"
+                       [placeholder]="'Standort hinzufügen'"
+                       [secondaryPlaceholder]="'Mit Enter bestätigen'"
+                       [tags]="formGroup.value.establishmentsInt"
+                       (tagsChange)="updateEstablishments('establishmentsInt', $event)">
+        </fit-tag-input>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <!--desiredBranches-->
+      <div class="col-6">
+        <h5 class="text-bold mb-3">Gesuchte Fachrichtungen</h5>
+
+        <div *ngFor="let branch of branches; let index = index"
+             class="checkbox mx-2">
+          <label [id]="'checkboxBranch' + index">
+            <input type="checkbox"
+                   (change)="branchChanged(branch, $event)"
+                   [checked]="isBranchSelected(branch)">
+            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+            {{branch.name}}
+          </label>
+        </div>
+      </div>
+
+      <!--provide-->
+      <div class="col-6">
+        <h5 class="text-bold mb-3">Vergeben Sie ...</h5>
+
+        <div class="checkbox mx-2">
+          <label id="providesSummerJob">
+            <input type="checkbox"
+                   formControlName="providesSummerJob">
+            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+            Ferialjobs/Ferialpraktika
+          </label>
+        </div>
+
+        <div class="checkbox mx-2">
+          <label id="providesThesis">
+            <input type="checkbox"
+                   formControlName="providesThesis">
+            <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+            Diplomarbeiten
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="text-bold mt-3">Logo</h5>
+
+    <!--logo-->
+    <div class="form-group row mb-3">
+      <label for="logo" class="col-md-3 col-form-label">Logo (max. 2MB):</label>
+      <div class="input-group col-md-9"
+           fitFilePicker
+           [accept]="'image/*'"
+           [maxSize]="2000000"
+           (filePick)="filePicked($event)">
+        <input class="form-control"
+               id="logo"
+               type="text"
+               [value]="logo?.name"
+               placeholder="Logo auswählen..."
+               disabled>
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">Durchsuchen</button>
+        </div>
+      </div>
+    </div>
+
+    <!--image and dropzone-->
+    <div class="row mb-2" style="height: 100px; max-height: 100px">
+      <div class="col-md-3">
+        <img *ngIf="logo != undefined && logo.dataUrl != undefined"
+             [src]="logo?.dataUrl"
+             class="logo-display w-100 h-100">
+      </div>
+      <div class="col-md-9">
+        <div fitFileDropzone
+             [accept]="'image\/.'"
+             [maxSize]="2000000"
+             (fileDrop)="filePicked($event)"
+             (dragenter)="isDrag = true"
+             (dragleave)="isDrag = false"
+             (drop)="isDrag = false"
+             class="drop-zone h-100 w-100"
+             [ngClass]="{'is-drag': isDrag}">
+          <div class="drop-zone-text centered-element">Logo: Drag & Drop</div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>

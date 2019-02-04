@@ -1,0 +1,53 @@
+<div class="container mt-3 p-3">
+  <h2 class="text-bold">Anmeldung zum Firmeninformationstag</h2>
+
+  <fit-registration-locked *ngIf="event.registrationState.isLocked"></fit-registration-locked>
+
+  <div *ngIf="!event.registrationState.isLocked">
+
+    <p class="text-justify">
+      Zur Anmeldung am FIT wird ein spezieller Code benötigt. Dieser Code ist in den schriftlichen Einladungen
+      enthalten. Sollten Sie jedoch ihren Code verloren haben, ist das überhaupt kein Problem. Ein neuer Code
+      kann jederzeit beantragt werden, welchen Sie dann nach einer Verifizierung ihrer Daten erhalten.
+    </p>
+
+    <div class="tiny-container mb-8">
+      <h2 class="text-bold">Anmeldung</h2>
+
+      <div class="vertical-border pb-4 pt-1 mb-4">
+        <form autocomplete="off">
+          <div class="form-group">
+
+            <label class="d-flex text-bold">
+              Code Eingabe:
+              <a class="ml-auto cursor-pointer"
+                 [routerLink]="['/fit/code-vergessen']">Code vergessen?</a>
+            </label>
+
+            <fit-member-code-input [(loginCode)]="loginCode"
+                                   [hasFailed]="hasFailed"
+                                   [disabled]="isLoading">
+            </fit-member-code-input>
+          </div>
+
+          <button class="btn btn-lg btn-block btn-primary"
+                  id="btnFitRegister"
+                  [disabled]="loginCode.length < 14 || isLoading"
+                  [ngClass]="{'cursor-not-allowed': loginCode.length < 14}"
+                  (click)="loginToBooking()">
+            Anmelden
+          </button>
+        </form>
+      </div>
+
+      <h3>Sie haben keinen Code?</h3>
+      <div>
+        <button class="btn btn-lg btn-block btn-dark"
+                [routerLink]="['/fit/code-beantragen']">
+          Neuen Code beantragen
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>

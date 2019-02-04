@@ -1,0 +1,29 @@
+<div *ngIf="isAppLoading()">
+  <div class="text-center d-flex flex-column app-loading-container align-items-center justify-content-center">
+    <h1 class="text-bold">Anwendung lädt ... </h1>
+    <h1><i class="fa fa-spin fa-circle-o-notch"></i></h1>
+  </div>
+</div>
+<div *ngIf="!isAppLoading()" class="main-page d-flex flex-column">
+  <fit-header *ngIf="showFitHeader()"></fit-header>
+  <fit-admin-header *ngIf="showAdminHeader()"
+                    class="admin-header-spacing">
+  </fit-admin-header>
+
+  <router-outlet></router-outlet>
+
+  <fit-footer *ngIf="showFitHeader()">
+  </fit-footer>
+</div>
+
+<!--TODO Remove one day-->
+<div class="fixed-bottom ml-2" style="width: 500px">
+  <span class="bg-danger" style="color: #caff9c">
+    very secret dev area:
+    <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
+    <a [routerLink]="['/']">FIT</a> |
+    <a [routerLink]="['/konto/login']">ACCOUNT</a> |
+    <button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>
+  </span>
+</div>
+
