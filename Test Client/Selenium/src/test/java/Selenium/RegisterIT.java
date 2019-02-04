@@ -114,6 +114,11 @@ public class RegisterIT {
         driver.findElement(By.xpath("//div[contains(text(),'Firmen bestätigen')]")).click();
         driver.findElement(By.xpath("//button[@class='btn btn-sm btn-success mb-0-5 py-0 px-1']")).click();
 
+        try
+        {Thread.sleep(2000);}
+        catch(InterruptedException ex){
+            ex.printStackTrace();
+        }
         //Test if OK Window pops up
         assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
     }
@@ -147,11 +152,6 @@ public class RegisterIT {
             else
                 Assert.fail("no FirmenToken found");
 
-            driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
-            driver.findElement(By.id("btnFitRegister")).click();
-
-            assertTrue(driver.findElement(By.cssSelector(".toast-container")).isDisplayed());
-
             System.out.println("FirmenToken: " + FirmenToken);
             folder.close(false);
             store.close();
@@ -166,21 +166,6 @@ public class RegisterIT {
             Assert.fail(ex.getMessage());
         }
     }
-    /*@Test
-    public void TEST004_Read(){
-        driver.get(Account);
-
-        System.out.println("FirmenToken: " + FirmenToken);
-        if(FirmenToken != null && FirmenToken != "not found"){
-            driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
-            driver.findElement(By.id("btnFitRegister")).click();
-
-            assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
-        }
-        else {
-            Assert.fail("No FirmenToken found");
-        }
-    }*/
 
     @Test
     public void TEST005_SignIn() {

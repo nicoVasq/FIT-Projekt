@@ -21,7 +21,7 @@ namespace Backend.Utils {
 
             // Admin
             FitUser fitUser = new FitUser();
-            fitUser.Email = "theswush1029@gmail.com";
+            fitUser.Email = "fit.website.testing.l@gmail.com";
             fitUser.UserName = fitUser.Email;
             fitUser.Role = "FitAdmin";
 
