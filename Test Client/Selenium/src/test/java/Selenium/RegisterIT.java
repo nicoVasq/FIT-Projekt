@@ -48,23 +48,17 @@ public class RegisterIT {
     }
     @AfterClass
     public static void closeDriver (){
-        /*try {
-            Thread.sleep(5000);*/
             driver.close();
-        /*}catch (Exception ex)
-        {
-            System.out.println(ex.getMessage());
-        }*/
     }
 
     @Test
-    public void TEST000_LOADSides(){
+    public void TEST000_LoadSides(){
         driver.get(FIT);
         driver.get(AdminTool);
         driver.get(Account);
     }
     @Test
-    public void TEST001_Register()
+    public void TEST001_getCompanyToken()
     {
         driver.get(FIT);
         driver.findElement(By.cssSelector(".btn-dark")).click(); //Clicks the button
@@ -103,7 +97,7 @@ public class RegisterIT {
     }
 
     @Test
-    public void TEST002_AcceptKonto(){
+    public void TEST002_AcceptCompany(){
         //log into the AdminTool
         driver.get(AdminTool);
         driver.findElement(By.id("email")).sendKeys("fit.website.testing.l@gmail.com");
@@ -124,7 +118,7 @@ public class RegisterIT {
     }
 
     @Test
-    public void TEST003_GETCODE (){
+    public void TEST003_GetCompanyCode (){
         String emailContent = "";
         driver.get("http://localhost:4200");
         try {
@@ -168,10 +162,10 @@ public class RegisterIT {
     }
 
     @Test
-    public void TEST005_SignIn() {
+    public void TEST005_RegisterAtCurrentFit() {
         try {
            
-            driver.get("http://localhost:4200");
+            driver.get(FIT);
             driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
             driver.findElement(By.id("btnFitRegister")).click();
             Thread.sleep(3000);
@@ -215,30 +209,18 @@ public class RegisterIT {
         }
     }
 
-    /*private Message[] getUnreadMessages(){
-=======
-    private Message[] getUnreadMessages(){
->>>>>>> 6d2778386be023cbd861c8c3d5e603c552065e6b
-        Message[] messages = null;
+    @Test
+    public void Test006_Delete(){
+        driver.get(FIT);
+        driver.findElement(By.xpath("//button[contains(text(),'Reset Db')]")).click();
         try {
-            /*SearchTerm term = new SearchTerm() {
-                public boolean match(Message message) {
-                    try {
-                        if (message.getSubject().contains(subject) && message.isSet(Flags.Flag.SEEN)) {
-                            return true;
-                        }
-                    } catch (MessagingException ex) {
-                        ex.printStackTrace();
-                    }
-                    return false;
-                }
-            };
-
-        } catch (NoSuchProviderException ex) {
-            ex.printStackTrace();
-        }catch (MessagingException ex){
-            ex.printStackTrace();
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
-        return messages;*/
-    //}
+        driver.get(FIT);
+        driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
+        driver.findElement(By.id("btnFitRegister")).click();
+        assertTrue(driver.findElement(By.cssSelector(".toast-container")).isDisplayed());
+    }
 }
