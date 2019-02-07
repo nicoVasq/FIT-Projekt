@@ -88,12 +88,12 @@ public class RegisterIT {
         driver.findElement(By.xpath("//button[contains(text(),'Abschicken')]")).click();
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(6000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         //Test if the OK Window pops up
-        //assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
+        assertTrue(driver.findElement(By.cssSelector(".toast-title")).isDisplayed());
     }
 
     @Test
@@ -120,8 +120,9 @@ public class RegisterIT {
     @Test
     public void TEST003_GetCompanyCode (){
         String emailContent = "";
-        driver.get("http://localhost:4200");
         try {
+            Thread.sleep(2000);
+
             Message messages[];
             Properties properties = new Properties();
             properties.setProperty("imap.googlemail.com","imaps");
@@ -158,13 +159,17 @@ public class RegisterIT {
         }catch(IOException ex){
             ex.printStackTrace();
             Assert.fail(ex.getMessage());
+        }catch (InterruptedException ex){
+            ex.printStackTrace();
+            Assert.fail(ex.getMessage());
         }
     }
 
     @Test
     public void TEST005_RegisterAtCurrentFit() {
+        if(FirmenToken == null)
+            Assert.fail("kein FirmenToken");
         try {
-           
             driver.get(FIT);
             driver.findElement(By.id("code-part1")).sendKeys(FirmenToken);
             driver.findElement(By.id("btnFitRegister")).click();
@@ -202,7 +207,7 @@ public class RegisterIT {
             driver.findElement(By.id("btnSubmitBooking")).click();
             Thread.sleep(1000);
             driver.findElement(By.xpath("//button[contains(text(),'Anmeldung durchführen')]")).click();
-            Thread.sleep(3000);
+            Thread.sleep(30000);
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -214,7 +219,7 @@ public class RegisterIT {
         driver.get(FIT);
         driver.findElement(By.xpath("//button[contains(text(),'Reset Db')]")).click();
         try {
-            Thread.sleep(60000);
+            Thread.sleep(30000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
