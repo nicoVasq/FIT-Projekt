@@ -15,6 +15,9 @@ import javax.mail.search.FlagTerm;
 import com.sun.mail.util.MailLogger;
 import sun.misc.resources.Messages;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -109,7 +112,7 @@ public class RegisterIT {
         driver.findElement(By.xpath("//button[@class='btn btn-sm btn-success mb-0-5 py-0 px-1']")).click();
 
         try
-        {Thread.sleep(2000);}
+        {Thread.sleep(3000);}
         catch(InterruptedException ex){
             ex.printStackTrace();
         }
@@ -188,12 +191,44 @@ public class RegisterIT {
             driver.findElement(By.id("checkboxBranch1")).click();
             driver.findElement(By.id("providesSummerJob")).click();
             driver.findElement(By.id("providesThesis")).click();
+
+
+            //insert logo
+            driver.findElement(By.xpath("//button[contains(text(),'Durchsuchen')]")).click();
+
+            StringSelection ss = new StringSelection("C:\\Users\\thoma\\Desktop\\SYP_FIT\\FIT-Projekt\\Test Client\\Selenium\\resources\\logo_fit.png");
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+
+            Robot robot = new Robot();
+
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+
             Thread.sleep(1000);
             driver.findElement(By.id("btnNext")).click();
             Thread.sleep(2000);
 
             driver.findElement(By.id("representativeName0")).sendKeys("Max Mustertester");
             driver.findElement(By.id("representativeEmail0")).sendKeys("Mustertester@gmail.com");
+
+            driver.findElement(By.xpath("//button[contains(text(),'Durchsuchen')]")).click();
+            StringSelection ss2 = new StringSelection("C:\\Users\\thoma\\Desktop\\SYP_FIT\\FIT-Projekt\\Test Client\\Selenium\\resources\\logo_fit.png");
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss2, null);
+
+            Robot robot2 = new Robot();
+
+            robot2.keyPress(KeyEvent.VK_CONTROL);
+            robot2.keyPress(KeyEvent.VK_V);
+            robot2.keyRelease(KeyEvent.VK_V);
+            robot2.keyRelease(KeyEvent.VK_CONTROL);
+            robot2.keyPress(KeyEvent.VK_ENTER);
+            robot2.keyRelease(KeyEvent.VK_ENTER);
+
+            Thread.sleep(2000);
             jse.executeScript("window.scrollBy(0,1000)", "");
             driver.findElement(By.id("btnNext")).click();
             Thread.sleep(2000);
@@ -210,6 +245,8 @@ public class RegisterIT {
             Thread.sleep(30000);
 
         } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (AWTException e) {
             e.printStackTrace();
         }
     }
