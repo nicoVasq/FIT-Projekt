@@ -54,7 +54,7 @@ Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 
 Tests werden ausgeführt mit `protractor protractor.conf.js`
 
-### [Selenium Client](/Test\ Client/Selenium/)
+### [Selenium Client](./Test\ Client/Selenium/)
 Benötigt:
 
 - **[Selenium Standalone Server](https://www.seleniumhq.org/download/)**  
