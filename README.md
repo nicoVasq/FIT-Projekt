@@ -26,8 +26,7 @@ funktioniert. Danach wieder entkommentieren damit Testdaten erstellt werden.
 In Visual Studio oben **Backend** auswählen und ausführen.
 
 ### [Protractor](https://www.protractortest.org/#/) 
-(befindet sich im [Client](FIT-Projekt/Test\ Client/Protractor/fit-client-testing/
-) - Angular Projekt)  
+(befindet sich im [Client](https://github.com/nicoVasq/FIT-Projekt/tree/Development/Test%20Client/Protractor/fit-client-testing) - Angular Projekt)  
 Protractor is ein end-to-end testing Framework für Angular/Angular JS Applikationen.\
 Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 - **Protractor-Setup:**
@@ -54,7 +53,7 @@ Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 
 Tests werden ausgeführt mit `protractor protractor.conf.js`
 
-### [Selenium Client](./Test\ Client/Selenium/)
+### [Selenium Client](https://github.com/nicoVasq/FIT-Projekt/tree/Development/Test%20Client/Selenium)
 Benötigt:
 
 - **[Selenium Standalone Server](https://www.seleniumhq.org/download/)**  
