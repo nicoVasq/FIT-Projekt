@@ -9,7 +9,7 @@ Als Test-Browser wird Google Chrome benützt - mit dem Chrome Webdriver von Sele
 
 <img src="Images/FitWebsite_Simple.png" />
 
-## :gear: Setup 
+## :gear: Setup (Test Applikationen)
 Für die Installationen wird der **[Node Package Manager](https://nodejs.org/en/download/)** benötigt 
 ### Client (Angular Applikation)
 Die benötigten Dependencies bekommen:\
