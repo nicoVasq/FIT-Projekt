@@ -7,7 +7,9 @@ Als Test-Browser wird Google Chrome benützt - mit dem Chrome Webdriver von Sele
 
 ### Wir testen das Projekt mit einem ausenstehenden Java Selenium Programm
 
-<img src="Images/FitWebsite_Simple.png" />
+<img src="Images/FitWebsite_Simple.png" />  
+
+**[Systemarchitektur](Images/FitWebsite.png)**
 
 ## :gear: Setup 
 Für die Installationen wird der **[Node Package Manager](https://nodejs.org/en/download/)** benötigt 
