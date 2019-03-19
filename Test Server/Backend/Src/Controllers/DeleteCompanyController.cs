@@ -14,26 +14,67 @@ using System.Diagnostics;
 
 namespace Backend.Src.Controllers
 {
-    [Route("api/resetdb")]
+    [Route("api/deleteCompany")]
     [Controller]
-    public class DbResetController : Controller
+    public class DeleteCompanyController : Controller
     {
         private IUnitOfWork _uow;
 
-        public DbResetController(IUnitOfWork uow)
+        public DeleteCompanyController(IUnitOfWork uow)
         {
             _uow = uow;
         }
 
+        // To be removed
+        // => Companies should only be deleted by name (and not the last element)
         [HttpGet]
-        public void DeleteDbRequest()
+        [ProducesResponseType(typeof(Company), StatusCodes.Status200OK)]
+        public IActionResult DeleteLastCompany()
+        {
+            Booking booking = _uow.BookingRepository.Get().OrderBy(b => b.Id).Last();
+            Company company = _uow.CompanyRepository.Get().OrderBy(c => c.Id).Last();
+
+            //Deleting entities 
+            if(booking.fk_Company == company.Id)
+            {
+                DeleteEntities(company, booking);
+                _uow.Save();
+            }
+
+            return new OkObjectResult(company);
+        }
+
+        [HttpGet("{name}")]
+        [ProducesResponseType(typeof(Company), StatusCodes.Status200OK)]
+        public IActionResult DeleteCompanyByName(string name)
+        {
+            Company company = _uow.CompanyRepository.Get().SingleOrDefault(c => c.Name == name);
+            if (company != null)
+            {
+                Booking booking = _uow.BookingRepository.Get().SingleOrDefault(b => b.fk_Company == company.Id);
+
+                DeleteEntities(company, booking);
+                _uow.Save();
+
+                return new OkObjectResult(company);
+            }
+
+            return new BadRequestObjectResult(new
+                {
+                    errorMessage = $"Es wurde keine Firma mit dem Namen '{name}' gefunden.",
+                });
+        }
+
+        /// <summary>
+        /// Deletes database entries
+        /// </summary>
+        /// <param name="company">Company to delete</param>
+        /// <param name="booking">Booking to delete</param>
+        private void DeleteEntities(Company company, Booking booking)
         {
             Console.WriteLine("\nDeleting\n#------------------------------#");
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
-
-            Booking booking = _uow.BookingRepository.Get().OrderBy(b => b.Id).Last();
-            Company company = _uow.CompanyRepository.Get().OrderBy(c => c.Id).Last();
 
             var bookingBranches = _uow.BookingBranchesRepository.Get().Where(br => br.fk_Booking == booking.Id);
             Console.WriteLine($"BookingBranches: {bookingBranches.Count()}");
@@ -66,7 +107,7 @@ namespace Backend.Src.Controllers
                 _uow.RepresentativeRepository.Delete(item);
             }
 
-            Console.WriteLine($"\nAdress\nId:{company.Address.Id} - {company.Address.Street} {company.Address.ZipCode}\n");
+            Console.WriteLine($"\nAddress\nId:{company.Address.Id} - {company.Address.Street} {company.Address.ZipCode}\n");
             _uow.AddressRepository.Delete(company.fk_Address);
 
             Console.WriteLine($"Booking\nId:{booking.Id} Company:{booking.Company.Name}");
@@ -88,25 +129,12 @@ namespace Backend.Src.Controllers
             // Delete Presentation (+ PresentationBranch*)
             // [Delete ChangeProtocol*]
 
-            _uow.Save();
-
-
             stopWatch.Stop();
             TimeSpan ts = stopWatch.Elapsed;
             string elapsedTime = String.Format("{0:00}:{1:00}.{2:00}", ts.Minutes, ts.Seconds,
                ts.Milliseconds / 10);
             Console.WriteLine("...\nFinished\nTime elapsed: " + elapsedTime);
 
-        }
-
-        [HttpGet("{name}")]
-        [ProducesResponseType(typeof(Company), StatusCodes.Status200OK)]
-        public IActionResult Delete(string name)
-        {
-            Company company = _uow.CompanyRepository.Get().SingleOrDefault(c => c.Name == name);
-            Booking booking = _uow.BookingRepository.Get().SingleOrDefault(b => b.fk_Company == company.Id);
-
-            return new ObjectResult(company);
         }
     }
 }
