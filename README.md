@@ -26,6 +26,8 @@ funktioniert. Danach wieder entkommentieren damit Testdaten erstellt werden.
 In Visual Studio oben **Backend** auswählen und ausführen.
 
 ### [Protractor](https://www.protractortest.org/#/) 
+(befindet sich im [Client](FIT-Projekt/Test\ Client/Protractor/fit-client-testing/
+) - Angular Projekt)  
 Protractor is ein end-to-end testing Framework für Angular/Angular JS Applikationen.\
 Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 - **Protractor-Setup:**
@@ -41,7 +43,7 @@ Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
     ```
     npm install --save @types/jasminewd2
     ```
-    **[Selenium](https://www.seleniumhq.org/)** standalone server (wird von Protractor benötigt):
+    Selenium standalone server (wird von Protractor benötigt):
     ```
     webdriver-manager update
     ```
@@ -52,140 +54,17 @@ Wir benützt die Syntax von dem [Jasmine](https://jasmine.github.io/) Framework.
 
 Tests werden ausgeführt mit `protractor protractor.conf.js`
 
-### Selenium Client
+### [Selenium Client](/Test\ Client/Selenium/)
+Benötigt:
 
-## Anderungsprotokoll
-
-
-## Client 
- - app.component.html
-``` html
-<div class="fixed-bottom ml-2"   style="width: 500px">
-  <span class="bg-danger" style="color: #caff9c">
-    very secret dev area:
-    <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
-    <a [routerLink]="['/']">FIT</a> |
-    <a [routerLink]="['/konto/login']">ACCOUNT</a> |
-    <button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>
-  </span>
-</div
-```
-Added   
-  `style="width: 500px`  
-  `<button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>`
+- **[Selenium Standalone Server](https://www.seleniumhq.org/download/)**  
+- **[Chrome Webdriver](http://chromedriver.chromium.org/downloads)** (verwendet wird Selenium mit **Google Chrome**)
 
 
-- app.component.ts
-```ts
-...
-import {HttpClient} from '@angular/common/http';
-import {AppConfig} from './core/app-config/app-config.service';
-.
-.
 
-public constructor(private applicationStateService: ApplicationStateService,
-                    .
-                    .                    
-                    private http: HttpClient,
-                    private appConfig: AppConfig) {
-  }
-.
-.
+## Änderungsprotokoll
 
-public SendDbMigrateRequest(): void {
-    this.http.get('http://localhost:8181/api/resetdb').subscribe(data => {
-        console.log(data); });
-    console.log('Delete Requested');
-}
-```
-
-- app.module.ts
-```ts
-...
-import { HttpClientModule } from '@angular/common/http';
-
-.
-.
-@NgModule({
-  imports: [
-    ...,
-    HttpClientModule
-    ...
-```
-
-## Server
-
-`Src/Controllers/DbResetController.cs` hinzugefügt  
-~~Reset.cs~~
-
-
-```c#
-namespace Backend.Src.Controllers
-{
-    [Route("api/resetdb")]
-    [Controller]
-    public class DbResetController : Controller
-    {
-        private IUnitOfWork _uow;
-
-        public DbResetController(IUnitOfWork uow)
-        {
-            _uow = uow;
-        }
-
-        [HttpGet]
-        public void DeleteDbRequest()
-        {
-            Booking booking = _uow.BookingRepository.Get().Last();
-            Company company = _uow.CompanyRepository.Get().Last();
-
-            var bookingBranches = _uow.BookingBranchesRepository.Get().Where(br => br.fk_Booking == booking.Id);
-            foreach (var item in bookingBranches)
-            {
-                _uow.BookingBranchesRepository.Delete(item);
-            }
-
-            var companyBranch = _uow.CompanyBranchRepository.Get().Where(cb => cb.fk_Company == company.Id);
-            foreach (var item in companyBranch)
-            {
-                _uow.CompanyBranchRepository.Delete(item);
-            }
-
-            var resourceBooking = _uow.ResourceBookingRepository.Get().Where(rb => rb.fk_Booking == booking.Id);
-            foreach (var item in resourceBooking)
-            {
-                _uow.ResourceBookingRepository.Delete(item);
-            }
-
-            foreach (var item in booking.Representatives)
-            {
-                _uow.RepresentativeRepository.Delete(item);
-            }
-
-
-            var contacts = _uow.ContactRepository.Get().Where(c => c.Id == company.fk_Contact);
-            foreach (var item in contacts)
-            {
-                _uow.ContactRepository.Delete(item);
-            }
-
-            _uow.AddressRepository.Delete(company.fk_Address);
-
-            _uow.BookingRepository.Delete(booking.Id);
-            _uow.CompanyRepository.Delete(company.Id);
-
-
-            // TODO
-            // Delete Presentation (+ PresentationBranch*)
-            // [Delete ChangeProtocol*]
-
-            _uow.Save();
-
-        }
-    }
-}
-
-```
+Die Änderungen konnen [hier](./CodeChangesProtocol.md) eingesehen werden
 
 
 ## Wir programmieren mit ...
