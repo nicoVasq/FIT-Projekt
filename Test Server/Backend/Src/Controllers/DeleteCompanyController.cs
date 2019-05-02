@@ -104,6 +104,7 @@ namespace Backend.Src.Controllers
             foreach (var item in booking.Representatives)
             {
                 Console.WriteLine($"Id:{item.Id} Name:{item.Name}");
+
                 _uow.RepresentativeRepository.Delete(item);
             }
 
