@@ -33,11 +33,6 @@ export class AppComponent implements OnInit {
                      private appConfig: AppConfig) {
   }
 
-  public onSubmit() {
-    // return this.companyName;
-    console.log(this.companyName);
-  }
-
   public ngOnInit(): void {
     ErrorInterceptor.toastr = this.toastr;
   }
@@ -55,9 +50,11 @@ export class AppComponent implements OnInit {
   }
 
   // TO REMOVE LATER
-  // Temporal function for migrating the database
+  // Temporal function for deleting a company
   public SendDbMigrateRequest(): void {
-    this.http.get('http://localhost:8181/api/deleteCompany/' + this.companyName).subscribe(data => {console.log(data); });
-    console.log('Delete Requested');
+    if (this.companyName !== '') {
+      this.http.get('http://localhost:8181/api/deleteCompany/' + this.companyName).subscribe(data => {console.log(data); });
+      console.log('Delete Requested');
+    }
   }
 }
