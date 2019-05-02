@@ -19,6 +19,7 @@ import {AppConfig} from './core/app-config/app-config.service';
 export class AppComponent implements OnInit {
 
   FitApplication = FitApplication;
+  companyName: string = '';
 
   // noinspection JSUnusedLocalSymbols
   public constructor(private applicationStateService: ApplicationStateService,
@@ -49,9 +50,11 @@ export class AppComponent implements OnInit {
   }
 
   // TO REMOVE LATER
-  // Temporal function for migrating the database
+  // Temporal function for deleting a company
   public SendDbMigrateRequest(): void {
-    this.http.get('http://localhost:8181/api/resetdb').subscribe(data => {console.log(data); });
-    console.log('Delete Requested');
+    if (this.companyName !== '') {
+      this.http.get('http://localhost:8181/api/deleteCompany/' + this.companyName).subscribe(data => {console.log(data); });
+      console.log('Delete Requested');
+    }
   }
 }

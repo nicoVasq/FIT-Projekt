@@ -17,3 +17,11 @@
  7. **FIT-Kontakt** eintragen
  8. Anmeldung durchführen 
  
+# TODO
+
+### Tags
+- Tag hinzufügen/entfernen/archivieren
+- Einer Firma einen Tag geben/entfernen
+- (Nach Tag filtern)
+    - CSV export
+    -

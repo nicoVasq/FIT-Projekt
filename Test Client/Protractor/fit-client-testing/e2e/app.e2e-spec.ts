@@ -3,7 +3,7 @@ import { browser, by, element, protractor } from 'protractor';
 
 describe('log-file-explorer-client App', function () {
 
-  let token: string = '186F-BCF2-1874';
+  let token: string = '6513-82E9-A723';
   // let token: string = 'Firm-enTo-ken1';
   // let parts: string[] = token.split('-');
 

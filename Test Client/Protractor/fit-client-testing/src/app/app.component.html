@@ -17,13 +17,16 @@
 </div>
 
 <!--TODO Remove one day-->
-<div class="fixed-bottom ml-2" style="width: 500px">
+<div class="fixed-bottom ml-2" style="width: 380px">
   <span class="bg-danger" style="color: #caff9c">
     very secret dev area:
     <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
     <a [routerLink]="['/']">FIT</a> |
     <a [routerLink]="['/konto/login']">ACCOUNT</a> |
-    <button class="btn-danger" (click)="SendDbMigrateRequest()">Reset Db</button>
+    <form (submit)="SendDbMigrateRequest()">
+     <input [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}" placeholder="Company">
+      <input type="submit" value="Delete" class="btn-danger">
+    </form>
   </span>
 </div>
 

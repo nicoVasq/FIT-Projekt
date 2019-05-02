@@ -1,64 +1,17 @@
-# Code änderungen (bei produktiven Einsatz wieder entfernen)
-## Client 
- - app.component.html
-``` html
-<div class="fixed-bottom ml-2" style="width: 380px">
-  <span class="bg-danger" style="color: #caff9c">
-    very secret dev area:
-    <a [routerLink]="['/admin-tool/login']">ADMIN TOOL</a> |
-    <a [routerLink]="['/']">FIT</a> |
-    <a [routerLink]="['/konto/login']">ACCOUNT</a> |
-    <form (submit)="SendDbMigrateRequest()">
-     <input [(ngModel)]="companyName" [ngModelOptions]="{standalone: true}" placeholder="Company">
-      <input type="submit" value="Delete" class="btn-danger">
-    </form>
-  </span>
-</div>
-```
+﻿using Backend.Core.Contracts;
+using Backend.Core.Entities;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Reflection;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
+using System.Diagnostics;
 
-- app.component.ts
-```ts
-...
-import {HttpClient} from '@angular/common/http';
-import {AppConfig} from './core/app-config/app-config.service';
-.
-.
-companyName: string = '';
-
-public constructor(private applicationStateService: ApplicationStateService,
-                    .
-                    .                    
-                    private http: HttpClient,
-                    private appConfig: AppConfig) {
-  }
-.
-.
-
-// Temporal function for deleting a company
-public SendDbMigrateRequest(): void {
-    this.http.get('http://localhost:8181/api/deleteCompany/' + this.companyName).subscribe(data => {console.log(data); });
-    console.log('Delete Requested');
-```
-
-- app.module.ts
-```ts
-...
-import { HttpClientModule } from '@angular/common/http';
-
-.
-.
-@NgModule({
-  imports: [
-    ...,
-    HttpClientModule
-    ...
-```
-
-## Server
-
-`Src/Controllers/DeleteCompanyController` hinzugefügt  
-
-```c#
 namespace Backend.Src.Controllers
 {
     [Route("api/deleteCompany")]
@@ -151,6 +104,7 @@ namespace Backend.Src.Controllers
             foreach (var item in booking.Representatives)
             {
                 Console.WriteLine($"Id:{item.Id} Name:{item.Name}");
+
                 _uow.RepresentativeRepository.Delete(item);
             }
 
@@ -185,5 +139,3 @@ namespace Backend.Src.Controllers
         }
     }
 }
-
-```
